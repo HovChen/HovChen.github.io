@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Huangwei Chen/Personal Homepage"
+title                    : "Homepage"
 title_separator          : "-"
 name                     : &name "Huangwei Chen"
 description              : &description "A junior majoring in CS"
