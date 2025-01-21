@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Hov Chen's Academic Homepage"
+title: "Huangwei Chen's Academic Homepage"
 author_profile: true
 redirect_from:
   - /about/
@@ -11,7 +11,7 @@ redirect_from:
 
 I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). My academic interests lie in **machine learning, deep learning, computer vision, and computational mathematics**. In the summer of 2024, I participated in the **Deep Learning Summer Program** at the **University of Cambridge**, where I gained further insights into **machine learning, reinforcement learning, and research methodologies**.
 
-I have achieved outstanding academic performance, ranking **1st among 549 students** in comprehensive evaluation and receiving multiple **national and provincial scholarships**, including the **National Scholarship** and the **Provincial Government Scholarship**.
+I have achieved outstanding academic performance, ranking **1st among 549 students** in comprehensive evaluation and receiving multiple scholarships, including the **National Scholarship** and the **Provincial Government Scholarship**.
 
 ## Research & Projects
 
@@ -34,12 +34,12 @@ I have led and participated in several **research and engineering projects**, pr
 
 I have actively participated in **mathematical modeling and AI-related competitions**, winning **several national and international awards**:
 
-- **First Prize (M Award) - Mathematical Contest in Modeling (MCM)** (International)
-- **Silver Medal - China International College Students Innovation Competition**
+- **Meritorious Winner (First Prize) - 2024 Interdisciplinary Contest In Modeling (ICM)** (International)
+- **Silver Medal - China International College Students'Innovation Competition（CICSIC）**
 - **First Prize - MathorCup Mathematical Modeling Competition**
 - **First Prize - APMCM Asia-Pacific Mathematical Modeling Competition**
 - **National Third Prize - China University Service Outsourcing Innovation and Entrepreneurship Competition**
-- **National Third Prize - China College Students Computer Design Competition**
+- **National Third Prize - Chinese Collegiate Computing Competition**
 - **National Third Prize - ICT Industry-Academia Integration Innovation Competition**
 
 ## Skills & Experience
@@ -50,10 +50,10 @@ I have actively participated in **mathematical modeling and AI-related competiti
   - Documented **technical reports** on algorithm improvements.
 
 - **Technical Skills:**
-  - **Programming:** Python, C++, MATLAB, PyTorch
+  - **Programming:** Python, PyTorch, Java
   - **Machine Learning & AI:** Deep Learning, Computer Vision, NLP, Multimodal Learning
-  - **Software & Tools:** LaTeX, Word, Adobe Photoshop, Final Cut Pro
-  - **Communication & Leadership:** Served as **Vice Secretary of the College Student Union**, coordinated **20+ large-scale academic events**, and led volunteer efforts at the **Hangzhou Asian Games**.
+  - **Software & Tools:** Powerpoint, LaTeX, Word, Adobe Audition, Adobe Lightroom, Adobe Photoshop, Adobe Illustrator, Jianyin
+  - **Communication & Leadership:** Served as **Deputy Secretary of Computer School Youth League Committee**, coordinated **20+ large-scale events**, and led volunteer efforts at the **Hangzhou Asian Games**.
 
 ## Contact
 
