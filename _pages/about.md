@@ -36,7 +36,7 @@ I have actively participated in **mathematical modeling and AI-related competiti
 
 - **Technical Skills:** Deep Learning (especially LLM)， Slide Production, Photography, Audio and Video Clip Production
 
-- **Communication & Leadership:** Served as **Deputy Secretary** of HDU Computer School Youth League Committee, and led volunteer efforts at the **Hangzhou Asian Games**.
+- **Communication & Leadership:** Served as **Deputy Secretary** of HDU Computer School Committee of Communist Youth League, and led volunteer efforts at the **Hangzhou Asian Games**.
 
 ## Contact
 
