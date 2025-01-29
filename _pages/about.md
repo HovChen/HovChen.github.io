@@ -22,44 +22,74 @@ I have led and participated in several **research and engineering projects**, pr
   - Fine-tuned **MiniCPM, InternVL, and Qwen2VL** models for **text generation** based on pathology data.
   - Designed an **adapter mechanism** to enhance image similarity retrieval and **improved prompt engineering** for text consistency.
 
-- **Zhilian Weinao Metaverse Environmental Monitoring System (Project Leader)**
-  - Developed a **digital twin-based monitoring system** using **metaverse and 3D reconstruction** technologies.
-  - Integrated **object detection and anomaly recognition** for real-time risk analysis in smart environments.
-
-- **University Student Employment Capability Assessment and Job Recommendation System (Core Developer)**
-  - Designed an **OCR-based automatic resume parser**, extracting key information such as education, skills, and work experience.
-  - Applied **machine learning models** to **optimize job recommendations** based on candidate profiles.
-
 ## Competitions & Awards
 
 I have actively participated in **mathematical modeling and AI-related competitions**, winning **several national and international awards**:
 
-- **Meritorious Winner (First Prize) - 2024 Interdisciplinary Contest In Modeling (ICM)** (International)
-- **Silver Medal - China International College Students'Innovation Competition（CICSIC）**
+- **Meritorious Winner - 2024 Interdisciplinary Contest In Modeling**
+- **Silver Medal - China International College Students'Innovation Competition**
 - **First Prize - MathorCup Mathematical Modeling Competition**
-- **First Prize - APMCM Asia-Pacific Mathematical Modeling Competition**
-- **National Third Prize - China University Service Outsourcing Innovation and Entrepreneurship Competition**
-- **National Third Prize - Chinese Collegiate Computing Competition**
-- **National Third Prize - ICT Industry-Academia Integration Innovation Competition**
 
 ## Skills & Experience
 
 - **Internship:** Image Algorithm Engineer at **Hangzhou Hongyun Zhongxin Technology Co., Ltd.** (2024)
-  - Optimized **astronomical image tracking algorithms** using **YOLO v8**.
-  - Conducted **hyperparameter tuning and model fine-tuning** for deep learning applications.
-  - Documented **technical reports** on algorithm improvements.
 
-- **Technical Skills:**
-  - **Programming:** Python, PyTorch, Java
-  - **Machine Learning & AI:** Deep Learning, Computer Vision, NLP, Multimodal Learning
-  - **Software & Tools:** Powerpoint, LaTeX, Word, Adobe Audition, Adobe Lightroom, Adobe Photoshop, Adobe Illustrator, Jianyin
-  - **Communication & Leadership:** Served as **Deputy Secretary of Computer School Youth League Committee**, coordinated **20+ large-scale events**, and led volunteer efforts at the **Hangzhou Asian Games**.
+- **Technical Skills:** Deep Learning (especially LLM)， Slide Production, Photography, Audio and Video Clip Production
+
+- **Communication & Leadership:** Served as **Deputy Secretary** of HDU Computer School Youth League Committee, and led volunteer efforts at the **Hangzhou Asian Games**.
 
 ## Contact
 
-📧 Email: [chenhw318@163.com](mailto:chenhw318@163.com)  
-🔗 GitHub: [HovChen](https://github.com/HovChen)  
-📜 [Curriculum Vitae](../assets/Curriculum_Vitae.pdf)
+<div class="contact-links">
+  <a href="mailto:chenhw318@163.com" class="contact-item">
+    <i class="fas fa-envelope"></i>
+    <span>chenhw318@163.com</span>
+  </a>
+  <a href="https://github.com/HovChen" class="contact-item">
+    <i class="fab fa-github"></i>
+    <span>GitHub</span>
+  </a>
+  <a href="../assets/Curriculum_Vitae.pdf" class="contact-item">
+    <i class="fas fa-file-alt"></i>
+    <span>Curriculum Vitae</span>
+  </a>
+</div>
+
+<style>
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #495057;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+  text-decoration: none;
+}
+
+.contact-item i {
+  font-size: 1.2em;
+  margin-right: 12px;
+  color: rgb(74, 78, 82);
+}
+
+.contact-item span {
+  font-size: 1em;
+}
+</style>
 
 ---
 This website is powered by [Academic Pages](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub Pages.
