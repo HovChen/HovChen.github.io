@@ -21,6 +21,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - Provincial Government for the academic year 2022-2023
 - Top 10 College Students of 2023 in HDUCS
 - 2023 Influential Man of HDUCS
+- 2024 "Star of Tailong" Scholarship
 
 - **Meritorious Winner - 2024 Interdisciplinary Contest In Modeling**
 - **Silver Medal - China International College Students'Innovation Competition**
