@@ -9,34 +9,23 @@ redirect_from:
 
 ## About Me
 
-I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). My academic interests lie in **machine learning, deep learning, computer vision, and computational mathematics**. In the summer of 2024, I participated in the **Deep Learning Summer Program** at the **University of Cambridge**, where I gained further insights into **machine learning, reinforcement learning, and research methodologies**.
-
-I have achieved outstanding academic performance, ranking **1st among 549 students** in comprehensive evaluation and receiving multiple scholarships, including the **National Scholarship** and the **Provincial Government Scholarship**.
+I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). My academic interests lie in **medical image processing and multimodal learning**.
 
 ## Research & Projects
 
-I have led and participated in several **research and engineering projects**, primarily focusing on **computer vision, multimodal learning, and intelligent systems**:
+- MMLNB: Multi-Modal Learning for Neuroblastoma Subtyping Classification Assisted with Textual Description Generation [[GitHub]](https://github.com/HovChen/MMLNB)
 
-- **LVLM-Assisted Pathological Image Recognition (Project Leader)**
-  - Built a **deep learning framework** integrating **multimodal large vision-language models** for pathological analysis.
-  - Fine-tuned **MiniCPM, InternVL, and Qwen2VL** models for **text generation** based on pathology data.
-  - Designed an **adapter mechanism** to enhance image similarity retrieval and **improved prompt engineering** for text consistency.
+## Awards & Competitions
 
-## Competitions & Awards
-
-I have actively participated in **mathematical modeling and AI-related competitions**, winning **several national and international awards**:
+- **National Scholarship for the academic year 2023-2024**
+- Provincial Government for the academic year 2022-2023
+- Top 10 College Students of 2023 in HDUCS
+- 2023 Influential Man of HDUCS
 
 - **Meritorious Winner - 2024 Interdisciplinary Contest In Modeling**
 - **Silver Medal - China International College Students'Innovation Competition**
-- **First Prize - MathorCup Mathematical Modeling Competition**
-
-## Skills & Experience
-
-- **Internship:** Image Algorithm Engineer at **Hangzhou Hongyun Zhongxin Technology Co., Ltd.** (2024)
-
-- **Technical Skills:** Deep Learning (especially LLM)， Slide Production, Photography, Audio and Video Clip Production
-
-- **Communication & Leadership:** Served as **Deputy Secretary** of HDU Computer School Committee of Communist Youth League, and led volunteer efforts at the **Hangzhou Asian Games**.
+- First Prize - MathorCup Mathematical Modeling Competition
+- First Prize – APMCM Asia-Pacific Mathematical Modeling Competition
 
 ## Contact
 
@@ -49,10 +38,10 @@ I have actively participated in **mathematical modeling and AI-related competiti
     <i class="fab fa-github"></i>
     <span>GitHub</span>
   </a>
-  <a href="../assets/Curriculum_Vitae.pdf" class="contact-item">
+  <!-- <a href="../assets/Curriculum_Vitae.pdf" class="contact-item">
     <i class="fas fa-file-alt"></i>
     <span>Curriculum Vitae</span>
-  </a>
+  </a> -->
 </div>
 
 <style>
