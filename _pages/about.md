@@ -13,7 +13,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 
 ## Research & Projects
 
-- MMLNB: Multi-Modal Learning for Neuroblastoma Subtyping Classification Assisted with Textual Description Generation [[GitHub]](https://github.com/HovChen/MMLNB)
+- MMLNB: Multi-Modal Learning for Neuroblastoma Subtyping Classification Assisted with Textual Description Generation [[GitHub]](https://github.com/HovChen/MMLNB) [[Paper]](https://arxiv.org/abs/2503.12927)
 
 ## Awards & Competitions
 
