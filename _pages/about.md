@@ -31,23 +31,6 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - Third Prize - Chinese Collegiate Computing Competition
 - Third Prize - ICT Production-education Integration Innovation Competition
 
-## Contact
-
-<div class="contact-links">
-  <a href="mailto:chenhw318@163.com" class="contact-item">
-    <i class="fas fa-envelope"></i>
-    <span>chenhw318@163.com</span>
-  </a>
-  <a href="https://github.com/HovChen" class="contact-item">
-    <i class="fab fa-github"></i>
-    <span>GitHub</span>
-  </a>
-  <!-- <a href="../assets/Curriculum_Vitae.pdf" class="contact-item">
-    <i class="fas fa-file-alt"></i>
-    <span>Curriculum Vitae</span>
-  </a> -->
-</div>
-
 <style>
 .contact-links {
   display: flex;
