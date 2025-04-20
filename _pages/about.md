@@ -27,7 +27,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - **Meritorious Winner - 2024 Interdisciplinary Contest In Modeling**
 - **Silver Medal - China International College Students'Innovation Competition**
 - First Prize - MathorCup Mathematical Modeling Competition
-- First Prize – APMCM Asia-Pacific Mathematical Modeling Competition
+- First Prize - APMCM Asia-Pacific Mathematical Modeling Competition
 - Third Prize - Competition of Service Outsourcing and Entrepreneurship Innovation‌
 - Third Prize - Chinese Collegiate Computing Competition
 - Third Prize - ICT Production-education Integration Innovation Competition
