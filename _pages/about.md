@@ -19,6 +19,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 
 - **National Scholarship for the academic year 2023-2024**
 - Provincial Government Scholarship for the academic year 2022-2023
+- 7th "Youth HDU" 100 outstanding college students "Star of Learning" "Star of Integrity"
 - Top 10 College Students of 2023 in HDUCS
 - 2023 Influential Man of HDUCS
 - 2024 "Star of Tailong" Scholarship
