@@ -9,7 +9,7 @@ redirect_from:
 
 ## About Me
 
-I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). My academic interests lie in **medical image processing and multimodal learning**.
+I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [School of Computer Science](https://computer.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). My academic interests lie in **medical image processing and multimodal learning**.
 
 ## Research & Projects
 
