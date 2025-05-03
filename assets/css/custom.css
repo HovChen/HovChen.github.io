@@ -1,0 +1,73 @@
+/* 自定义字体样式 */
+
+/* 修复 Font Awesome 图标 */
+.fa-location-dot:before {
+  content: "\f3c5"; /* fa-map-marker-alt */
+}
+
+.fa-building-columns:before {
+  content: "\f19c"; /* fa-bank/fa-university */
+}
+
+.fa-graduation-cap:before {
+  content: "\f19d";
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+.fa-link:before {
+  content: "\f0c1";
+}
+
+.fa-github:before {
+  content: "\f09b";
+}
+
+/* 标题 emoji 样式 */
+h2 {
+  line-height: 1.5;
+}
+
+/* 标题样式优化 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600; /* Source Serif Pro 半粗体 */
+  letter-spacing: 0.01em; /* 适当的字母间距 */
+  line-height: 1.4; /* 标题行高 */
+}
+
+/* 正文样式优化 */
+body {
+  font-weight: 400; /* Source Sans Pro 常规字重 */
+  letter-spacing: 0.01em;
+  line-height: 1.7; /* 增加行高 */
+}
+
+/* 链接样式优化 */
+a {
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+/* 侧边栏样式优化 */
+.sidebar .author__name {
+  font-weight: 500;
+}
+
+.sidebar .author__bio {
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* 导航菜单样式优化 */
+.masthead__menu-item {
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+/* 按钮样式优化 */
+.btn {
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
