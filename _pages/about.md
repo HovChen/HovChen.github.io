@@ -7,15 +7,15 @@ redirect_from:
   - /about.html
 ---
 
-## 👨‍🎓 &nbsp;About Me
+## 👨‍🎓 &nbsp;About Me {#about-me}
 
 I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [School of Computer Science](https://computer.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). My academic interests lie in **medical image processing and multimodal learning**.
 
-## 🔬 &nbsp;Researches
+## 🔬 &nbsp;Researches {#researches}
 
 - MMLNB: Multi-Modal Learning for Neuroblastoma Subtyping Classification Assisted with Textual Description Generation [[GitHub]](https://github.com/HovChen/MMLNB) [[Paper]](https://arxiv.org/abs/2503.12927)
 
-## 🏆 &nbsp;Awards
+## 🏆 &nbsp;Awards {#awards}
 
 - **National Scholarship for the academic year 2023-2024**
 - Provincial Government Scholarship for the academic year 2022-2023
@@ -24,7 +24,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - 2023 Influential Man of HDUCS
 - 2024 "Star of Tailong" Scholarship
 
-## 🥇 &nbsp;Competitions
+## 🥇 &nbsp;Competitions {#competitions}
 
 - **Meritorious Winner - 2024 Interdisciplinary Contest In Modeling**
 - **Silver Medal - China International College Students'Innovation Competition**
