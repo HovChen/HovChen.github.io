@@ -34,6 +34,15 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - Third Prize - Chinese Collegiate Computing Competition
 - Third Prize - ICT Production-education Integration Innovation Competition
 
+## 📷 &nbsp;Gallery {#gallery}
+
+<div class="gallery-scroll" style="overflow-x: auto; white-space: nowrap; padding-bottom: 10px;">
+  <img src="/images/2023西湖.JPG" alt="2023西湖" style="height: 180px; width: auto; display: inline-block; border-radius: 10px; box-shadow: 0 2px 8px #eee; margin-right: 20px; vertical-align: middle;" />
+  <img src="/images/2023先进班集体答辩.jpeg" alt="2023先进班集体答辩" style="height: 180px; width: auto; display: inline-block; border-radius: 10px; box-shadow: 0 2px 8px #eee; margin-right: 20px; vertical-align: middle;" />
+  <img src="/images/2025百大领奖.jpg" alt="2025百大领奖" style="height: 180px; width: auto; display: inline-block; border-radius: 10px; box-shadow: 0 2px 8px #eee; margin-right: 20px; vertical-align: middle;" />
+  <img src="/images/2025松花江铁路大桥.jpg" alt="2025松花江铁路大桥" style="height: 180px; width: auto; display: inline-block; border-radius: 10px; box-shadow: 0 2px 8px #eee; margin-right: 20px; vertical-align: middle;" />
+</div>
+
 <style>
 .contact-links {
   display: flex;
