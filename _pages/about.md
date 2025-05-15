@@ -9,7 +9,7 @@ redirect_from:
 
 ## 👨‍🎓 &nbsp;About Me {#about-me}
 
-I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [School of Computer Science](https://computer.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). My academic interests lie in **medical image processing and multimodal learning**.
+I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [School of Computer Science](https://computer.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). My academic interests lie in **Medical Image Processing** and **Multimodal Learning**.
 
 ## 🔬 &nbsp;Researches {#researches}
 
@@ -17,12 +17,13 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 
 ## 🏆 &nbsp;Awards {#awards}
 
-- **National Scholarship for the academic year 2023-2024**
-- Provincial Government Scholarship for the academic year 2022-2023
-- 7th "Youth HDU" 100 outstanding college students "Star of Learning" "Star of Integrity"
-- Top 10 College Students of 2023 in HDUCS
-- 2023 Influential Man of HDUCS
-- 2024 "Star of Tailong" Scholarship
+- *2023-2024* **National Scholarship**
+- *2022-2023* Provincial Government Scholarship
+- *2023-2024* Top 10 College Students in HDUCS
+- *2023-2024* Influential Man of HDUCS
+- *2024-2025* 7th "Youth HDU" 100 outstanding college students "Star of Learning"
+- *2024-2025* 7th "Youth HDU" 100 outstanding college students "Star of Integrity"
+- *2024-2025* "Star of Tailong" Scholarship
 
 ## 🥇 &nbsp;Competitions {#competitions}
 
