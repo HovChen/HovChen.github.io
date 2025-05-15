@@ -11,29 +11,45 @@ redirect_from:
 
 I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [School of Computer Science](https://computer.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). My academic interests lie in **Medical Image Processing** and **Multimodal Learning**.
 
+## 📰 &nbsp;Reports {#reports}
+
+- [澎湃新闻：在杭电，看见奋斗足迹 ｜ 陈黄未：奔跑在“用AI解决领域痛点”的道路上](https://m.thepaper.cn/newsDetail_forward_30536383)
+- [央广网：中外学子对话黄帝文化，探寻乡村蝶变密码](https://zj.cnr.cn/gedilianbo/ls/20240806/t20240806_526836807.shtml)
+
+
 ## 🔬 &nbsp;Researches {#researches}
 
 - MMLNB: Multi-Modal Learning for Neuroblastoma Subtyping Classification Assisted with Textual Description Generation [[GitHub]](https://github.com/HovChen/MMLNB) [[Paper]](https://arxiv.org/abs/2503.12927)
 
 ## 🏆 &nbsp;Awards {#awards}
 
-- *2023-2024* **National Scholarship**
-- *2022-2023* Provincial Government Scholarship
-- *2023-2024* Top 10 College Students in HDUCS
-- *2023-2024* Influential Man of HDUCS
-- *2024-2025* 7th "Youth HDU" 100 outstanding college students "Star of Learning"
-- *2024-2025* 7th "Youth HDU" 100 outstanding college students "Star of Integrity"
-- *2024-2025* "Star of Tailong" Scholarship
+- *2023–2024* **National Scholarship**
+- *2022–2023* **Provincial Government Scholarship**
+- *2023–2024* **Top 10 Student**, HDU School of Computer Science (HDUCS)
+- *2023–2024* **Most Influential Student**, HDUCS
+- *2024–2025* **HDU "Star of Learning"**
+- *2024–2025* **HDU "Star of Integrity"**
+- *2024–2025* **"Star of Tailong" Scholarship**
 
 ## 🥇 &nbsp;Competitions {#competitions}
 
-- **Meritorious Winner - 2024 Interdisciplinary Contest In Modeling**
-- **Silver Medal - China International College Students'Innovation Competition**
-- First Prize - MathorCup Mathematical Modeling Competition
-- First Prize - APMCM Asia-Pacific Mathematical Modeling Competition
-- Third Prize - Competition of Service Outsourcing and Entrepreneurship Innovation‌
-- Third Prize - Chinese Collegiate Computing Competition
-- Third Prize - ICT Production-education Integration Innovation Competition
+- *2024.05* **Meritorious Winner**, Interdisciplinary Contest in Modeling (ICM)
+- *2024.10* **Silver Medal**, China International College Students' Innovation Competition
+- *2023.05* **First Prize**, MathorCup Mathematical Modeling Competition
+- *2024.01* **First Prize**, Asia-Pacific Mathematical Modeling Competition
+- *2024.05* **Third Prize**, Service Outsourcing and Entrepreneurship Innovation Competition
+- *2024.07* **Third Prize**, Chinese Collegiate Computing Competition
+- *2024.10* **Third Prize**, ICT Industry-Education Integration Innovation Competition
+
+## 📝 &nbsp;Services {#services}
+
+* *2024–2025* **19th Deputy Secretary**, Youth League Committee, HDU School of Computer Science (HDUCS)
+* *2022–2026* **Secretary**, Youth League Branch, Class 22052320, HDUCS
+* *2024–2025* **Member**, 9th Student Committee, Hangzhou Dianzi University
+* *2024–2025* **Secretary**, Youth League Branch, 11th Youth Marxism Elite Program, HDU
+* *2024–2025* **Assistant Class Advisor**, Class 24050513, HDUCS
+* *2024–2025* **Campus Integrity Culture Officer**, appointed by HDU Publicity Department
+* *2025–2026* **Youth Pioneer Ambassador for Cross-cultural Exchange**, appointed by HDU International Office
 
 ## 📷 &nbsp;Gallery {#gallery}
 <div class="gallery-scroll">
@@ -172,6 +188,4 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 </style>
 
----
-This website is powered by [Academic Pages](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub Pages.
 

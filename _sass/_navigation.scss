@@ -13,7 +13,7 @@
   margin-bottom: 0;
   padding-left: 2em;
   padding-right: 2em;
-  font-family: $sans-serif;
+  font-family: $type-size-6;
   -webkit-animation: intro 0.3s both;
           animation: intro 0.3s both;
   -webkit-animation-delay: 0.30s;
@@ -317,6 +317,7 @@
 
 .nav__list {
   font-size: 1.25rem;
+  font-family: $global-font-family;
 
   ul {
     margin-bottom: 1em;
@@ -350,7 +351,7 @@
 .nav__title {
   margin: 0;
   padding: 0.5rem 1rem;
-  font-family: $sans-serif-narrow;
+  font-family: $global-font-family;
   font-size: $type-size-5;
   font-weight: bold;
 }
@@ -359,7 +360,7 @@
   display: block;
   margin: 0.5rem 0;
   padding: 0.5rem 0;
-  font-family: $sans-serif-narrow;
+  font-family: $global-font-family;
   font-size: $type-size-6;
   font-weight: bold;
   text-transform: uppercase;
