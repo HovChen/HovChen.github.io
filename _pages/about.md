@@ -24,12 +24,12 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 ## 🏆 &nbsp;Awards {#awards}
 
 - *2023–2024* **National Scholarship**
-- *2022–2023* **Provincial Government Scholarship**
-- *2023–2024* **Top 10 Student**, HDU School of Computer Science (HDUCS)
-- *2023–2024* **Most Influential Student**, HDUCS
-- *2024–2025* **HDU "Star of Learning"**
-- *2024–2025* **HDU "Star of Integrity"**
-- *2024–2025* **"Star of Tailong" Scholarship**
+- *2022–2023* Provincial Government Scholarship
+- *2023–2024* Top 10 Student of HDUCS
+- *2023–2024* Most Influential Student of HDUCS
+- *2024–2025* HDU "Star of Learning"
+- *2024–2025* HDU "Star of Integrity"
+- *2024–2025* HDU "Star of Tailong" Scholarship
 
 ## 🥇 &nbsp;Competitions {#competitions}
 
