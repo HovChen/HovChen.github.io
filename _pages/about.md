@@ -43,13 +43,13 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 
 ## 📝 &nbsp;Services {#services}
 
-* *2024–2025* **19th Deputy Secretary**, Youth League Committee, HDU School of Computer Science (HDUCS)
+* *2024–2025* **Deputy Secretary**, 19th Youth League Committee, HDUCS
 * *2022–2026* **Secretary**, Youth League Branch, Class 22052320, HDUCS
-* *2024–2025* **Member**, 9th Student Committee, Hangzhou Dianzi University
+* *2024–2025* **Member**, 9th Student Committee, HDU
 * *2024–2025* **Secretary**, Youth League Branch, 11th Youth Marxism Elite Program, HDU
 * *2024–2025* **Assistant Class Advisor**, Class 24050513, HDUCS
-* *2024–2025* **Campus Integrity Culture Officer**, appointed by HDU Publicity Department
-* *2025–2026* **Youth Pioneer Ambassador for Cross-cultural Exchange**, appointed by HDU International Office
+* *2024–2025* **Campus Integrity Culture Officer**, HDU Publicity Department
+* *2025–2026* **Youth Pioneer Ambassador for Cross-cultural Exchange**, HDU International Office
 
 ## 📷 &nbsp;Gallery {#gallery}
 <div class="gallery-scroll">
