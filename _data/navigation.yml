@@ -17,6 +17,8 @@ main:
     url: /#competitions
   - title: "Services"
     url: /#services
+  - title: "Gallery"
+    url: /#gallery
   # - title: "Publications"
   #   url: /publications/
 
