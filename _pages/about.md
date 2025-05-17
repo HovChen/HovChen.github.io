@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Huangwei Chen's Academic Homepage"
+title: "Huangwei Chen's Homepage"
 author_profile: true
 redirect_from:
   - /about/
