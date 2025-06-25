@@ -9,7 +9,11 @@ redirect_from:
 
 ## 👨‍🎓 &nbsp;About Me {#about-me}
 
-I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [HDU-3DV-Lab](https://3d-v.github.io/3DV-Lab-Website/), [School of Computer Science](https://computer.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). My academic interests lie in **Medical Image Analysis** and **Multimodal Learning**.
+I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [HDU-3DV-Lab](https://3d-v.github.io/3DV-Lab-Website/), [School of Computer Science](https://cs.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). My academic interests lie in **Medical Image Analysis** and **Multimodal Learning**.
+
+## 💻 &nbsp;Internships {#internships}
+
+- *2025.06-Present*, Zhejiang University, Innovative Software Technology Development Center
 
 ## 📰 &nbsp;Reports {#reports}
 
