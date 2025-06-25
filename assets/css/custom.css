@@ -106,3 +106,10 @@ a {
   font-weight: 500;
   letter-spacing: 0.05em;
 }
+
+.nav-font-custom {
+  font-family: "Trebuchet MS", "Source Sans Pro", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 0.97em;
+  letter-spacing: 0.5px;
+}
