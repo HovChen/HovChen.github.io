@@ -13,6 +13,8 @@ main:
     url: /#reports
   - title: "Researches"
     url: /#researches
+  - title: "Projects"
+    url: /#projects
   - title: "Awards"
     url: /#awards
   - title: "Competitions"

@@ -25,6 +25,10 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 
 - MMLNB: Multi-Modal Learning for Neuroblastoma Subtyping Classification Assisted with Textual Description Generation [[GitHub]](https://github.com/HovChen/MMLNB) [[Paper]](https://arxiv.org/abs/2503.12927)
 
+## 📦 &nbsp;Projects {#projects}
+
+- [A Paper List for Medical Reasoning Large Language Models](https://github.com/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models)
+
 ## 🏆 &nbsp;Awards {#awards}
 
 - *2023–2024* **National Scholarship**
