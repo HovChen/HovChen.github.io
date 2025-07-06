@@ -9,11 +9,11 @@ redirect_from:
 
 ## 👨‍🎓 &nbsp;About Me {#about-me}
 
-I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [HDU-3DV-Lab](https://3d-v.github.io/3DV-Lab-Website/), [School of Computer Science](https://cs.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). My academic interests lie in **Medical Image Analysis** and **Multimodal Learning**.
+I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [HDU-3DV-Lab](https://3d-v.github.io/3DV-Lab-Website/), [School of Computer Science](https://cs.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). My academic interests lie in **Medical AI** and **Multimodal Large Language Models**.
 
 ## 💻 &nbsp;Internships {#internships}
 
-- *2025.06-Present*, Zhejiang University, Innovative Software Technology Development Center
+- *2025.06-Present*, [Zhejiang University](https://www.zju.edu.cn/), [Innovative Software Technology Development Center](http://eagle.zju.edu.cn/)
 
 ## 📰 &nbsp;Reports {#reports}
 
@@ -31,33 +31,35 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 
 ## 🏆 &nbsp;Awards {#awards}
 
-- *2023–2024* **National Scholarship**
+- *2022–2023* First-class Scholarship * 2
 - *2022–2023* Provincial Government Scholarship
+- *2023–2024* First-class Scholarship * 2
+- *2023–2024* **National Scholarship**
 - *2023–2024* Top 10 Student of HDUCS
-- *2023–2024* Most Influential Student of HDUCS
+- *2023–2024* Most Influential Students of HDUCS
 - *2024–2025* HDU "Star of Learning"
 - *2024–2025* HDU "Star of Integrity"
 - *2024–2025* HDU "Star of Tailong" Scholarship
 
 ## 🥇 &nbsp;Competitions {#competitions}
 
-- *2024.05* **Meritorious Winner**, Interdisciplinary Contest in Modeling (ICM)
-- *2024.10* **Silver Medal**, China International College Students' Innovation Competition
 - *2023.05* **First Prize**, MathorCup Mathematical Modeling Competition
 - *2024.01* **First Prize**, Asia-Pacific Mathematical Modeling Competition
+- *2024.05* **Meritorious Winner**, Interdisciplinary Contest in Modeling (ICM)
 - *2024.05* **Third Prize**, Service Outsourcing and Entrepreneurship Innovation Competition
 - *2024.07* **Third Prize**, Chinese Collegiate Computing Competition
-- *2024.10* **Third Prize**, ICT Industry-Education Integration Innovation Competition
+- *2024.10* **Silver Medal**, China International College Students' Innovation Competition
+- *2024.11* **Third Prize**, ICT Industry-Education Integration Innovation Competition
 
 ## 📝 &nbsp;Services {#services}
 
-* *2024–2025* **Deputy Secretary**, 19th Youth League Committee, HDUCS
-* *2022–2026* **Secretary**, Youth League Branch, Class 22052320, HDUCS
-* *2024–2025* **Member**, 9th Student Committee, HDU
-* *2024–2025* **Secretary**, Youth League Branch, 11th Youth Marxism Elite Program, HDU
-* *2024–2025* **Assistant Class Advisor**, Class 24050513, HDUCS
-* *2024–2025* **Campus Integrity Culture Officer**, HDU Publicity Department
-* *2025–2026* **Youth Pioneer Ambassador for Cross-cultural Exchange**, HDU International Office
+- *2022–2026* **Secretary**, Youth League Branch, Class 22052320, HDUCS
+- *2024–2025* **Deputy Secretary**, 19th Youth League Committee, HDUCS
+- *2024–2025* **Member**, 9th Student Committee, HDU
+- *2024–2025* **Secretary**, Youth League Branch, 11th Youth Marxism Elite Program, HDU
+- *2024–2025* **Assistant Class Advisor**, Class 24050513, HDUCS
+- *2024–2025* **Campus Integrity Culture Officer**, HDU Publicity Department
+- *2025–2026* **Youth Pioneer Ambassador for Cross-cultural Exchange**, HDU International Office
 
 ## 📷 &nbsp;Gallery {#gallery}
 <div class="gallery-scroll">
