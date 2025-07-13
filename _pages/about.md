@@ -50,8 +50,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - *2024.07* **Third Prize**, Chinese Collegiate Computing Competition
 - *2024.10* **Silver Medal**, China International College Students' Innovation Competition
 - *2024.11* **Third Prize**, ICT Industry-Education Integration Innovation Competition
-- *2025.07* **Gold Medal (Provincial Top 10)**, Zhejiang International College Students' Innovation Competition
-- *2025.07* **Gold Medal**, Zhejiang International College Students' Innovation Competition
+- *2025.07* **Two Gold Medals (one Provincial Top 10)**, Zhejiang International College Students' Innovation Competition
 
 ## 📝 &nbsp;Services {#services}
 
