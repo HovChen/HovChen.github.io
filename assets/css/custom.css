@@ -1,0 +1,115 @@
+/* 自定义字体样式 */
+
+/* 修复 Font Awesome 图标 */
+.fa-location-dot:before {
+  content: "\f3c5"; /* fa-map-marker-alt */
+}
+
+.fa-building-columns:before {
+  content: "\f19c"; /* fa-bank/fa-university */
+}
+
+.fa-graduation-cap:before {
+  content: "\f19d";
+}
+
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+.fa-link:before {
+  content: "\f0c1";
+}
+
+.fa-github:before {
+  content: "\f09b";
+}
+
+/* 标题 emoji 样式 */
+h2 {
+  line-height: 1.5;
+}
+
+/* 标题样式优化 */
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 0.4em;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 1.15em;
+  margin-bottom: 0.35em;
+  line-height: 1.25;
+}
+h3 {
+  font-size: 1.0em;
+  margin-bottom: 0.3em;
+  line-height: 1.3;
+}
+h4, h5, h6 {
+  font-size: 1.1em;
+  margin-bottom: 0.25em;
+  line-height: 1.35;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* 列表和段落间距优化 */
+ul, ol {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+p {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  text-align: justify;
+}
+
+/* 正文样式优化 */
+body {
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+
+a {
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.page__inner-wrap {
+  font-size: 0.9em;
+  font-weight: 200;
+}
+.page__inner-wrap strong,
+.page__inner-wrap b {
+  font-weight: 700;
+}
+
+.sidebar .author__name {
+  font-weight: 500;
+}
+
+.sidebar .author__bio {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.masthead__menu-item {
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.btn {
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.nav-font-custom {
+  font-family: "Trebuchet MS", "Source Sans Pro", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+}
