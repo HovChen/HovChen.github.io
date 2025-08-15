@@ -28,6 +28,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 ## 📦 &nbsp;Projects {#projects}
 
 - [A Paper List for Medical Reasoning Large Language Models](https://github.com/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models)
+- [A Paper List for Prototypical Learning](https://github.com/BeistMedAI/Paper-List-for-Prototypical-Learning)
 
 ## 🏆 &nbsp;Awards {#awards}
 
