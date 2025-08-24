@@ -9,7 +9,7 @@ redirect_from:
 
 ## 👨‍🎓 &nbsp;About Me {#about-me}
 
-I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [HDU-3DV-Lab](https://3d-v.github.io/3DV-Lab-Website/), [School of Computer Science](https://cs.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). My academic interests lie in **Medical AI** and **Multimodal Large Language Models**.
+I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [HDU-3DV-Lab](https://3d-v.github.io/3DV-Lab-Website/), [School of Computer Science](https://cs.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). My academic interests lie in **Medical AI**, **MLLMs** and **AI Agent**.
 
 ## 💻 &nbsp;Internships {#internships}
 
@@ -17,24 +17,23 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 
 ## 📰 &nbsp;Reports {#reports}
 
-- [澎湃新闻：在杭电，看见奋斗足迹 ｜ 陈黄未：奔跑在“用AI解决领域痛点”的道路上](https://m.thepaper.cn/newsDetail_forward_30536383)
-- [央广网：中外学子对话黄帝文化，探寻乡村蝶变密码](https://zj.cnr.cn/gedilianbo/ls/20240806/t20240806_526836807.shtml)
-
+- [![报道-澎湃新闻](https://img.shields.io/badge/%E6%8A%A5%E9%81%93-%E6%BE%8E%E6%B9%83%E6%96%B0%E9%97%BB-blue?style=flat-square)](https://m.thepaper.cn/newsDetail_forward_30536383) [在杭电，看见奋斗足迹 ｜ 陈黄未：奔跑在“用AI解决领域痛点”的道路上](https://m.thepaper.cn/newsDetail_forward_30536383)
+- [![报道-央广网](https://img.shields.io/badge/%E6%8A%A5%E9%81%93-%E5%A4%AE%E5%B9%BF%E7%BD%91-red?style=flat-square)](https://zj.cnr.cn/gedilianbo/ls/20240806/t20240806_526836807.shtml) [中外学子对话黄帝文化，探寻乡村蝶变密码](https://zj.cnr.cn/gedilianbo/ls/20240806/t20240806_526836807.shtml)
 
 ## 🔬 &nbsp;Researches {#researches}
 
-- MMLNB: Multi-Modal Learning for Neuroblastoma Subtyping Classification Assisted with Textual Description Generation [![GitHub Stars](https://img.shields.io/github/stars/HovChen/MMLNB)](https://github.com/HovChen/MMLNB) [![Paper](https://img.shields.io/badge/arXiv-2503.12927-b31b1b)](https://arxiv.org/abs/2503.12927)
-
+- MMLNB: Multi-Modal Learning for Neuroblastoma Subtyping Classification Assisted with Textual Description Generation 
+[![GitHub Stars](https://img.shields.io/github/stars/HovChen/MMLNB)](https://github.com/HovChen/MMLNB) [![Paper](https://img.shields.io/badge/arXiv-2503.12927-b31b1b)](https://arxiv.org/abs/2503.12927)  
 
 ## 📦 &nbsp;Projects {#projects}
 
-- [A Paper List for Medical Reasoning Large Language Models](https://github.com/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models) [![Stars](https://img.shields.io/github/stars/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models)](https://github.com/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models)
-- [A Paper List for Prototypical Learning](https://github.com/BeistMedAI/Paper-List-for-Prototypical-Learning) [![Stars](https://img.shields.io/github/stars/BeistMedAI/Paper-List-for-Prototypical-Learning)](https://github.com/BeistMedAI/Paper-List-for-Prototypical-Learning)
+- [![Stars](https://img.shields.io/github/stars/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models)](https://github.com/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models) [A Paper List for Medical Reasoning Large Language Models](https://github.com/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models)
+- [![Stars](https://img.shields.io/github/stars/BeistMedAI/Paper-List-for-Prototypical-Learning)](https://github.com/BeistMedAI/Paper-List-for-Prototypical-Learning) [A Paper List for Prototypical Learning](https://github.com/BeistMedAI/Paper-List-for-Prototypical-Learning)
 
 ## 🧾 &nbsp;Patents {#patents}
 
-- 基于自监督学习的三维医学影像异常检测方法及系统  [![](https://img.shields.io/badge/第一发明人-已授权-brightgreen)]()
-- 一种多阶段生成医学图像问答思维链数据的方法及装置  [![](https://img.shields.io/badge/第一发明人-已授权-brightgreen)]()
+- [![](https://img.shields.io/badge/第一发明人-已授权-brightgreen?style=flat-square)](https://www.cnipa.gov.cn) 基于自监督学习的三维医学影像异常检测方法及系统
+- [![](https://img.shields.io/badge/第一发明人-已授权-brightgreen?style=flat-square)](https://www.cnipa.gov.cn) 一种多阶段生成医学图像问答思维链数据的方法及装置  
 
 ## 🏆 &nbsp;Awards {#awards}
 

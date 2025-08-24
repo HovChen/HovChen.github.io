@@ -1,12 +1,9 @@
-/* 自定义字体样式 */
-
-/* 修复 Font Awesome 图标 */
 .fa-location-dot:before {
-  content: "\f3c5"; /* fa-map-marker-alt */
+  content: "\f3c5";
 }
 
 .fa-building-columns:before {
-  content: "\f19c"; /* fa-bank/fa-university */
+  content: "\f19c";
 }
 
 .fa-graduation-cap:before {
@@ -25,12 +22,6 @@
   content: "\f09b";
 }
 
-/* 标题 emoji 样式 */
-h2 {
-  line-height: 1.5;
-}
-
-/* 标题样式优化 */
 h1 {
   font-size: 1.5em;
   margin-bottom: 0.4em;
@@ -56,7 +47,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.01em;
 }
 
-/* 列表和段落间距优化 */
 ul, ol {
   margin-top: 0.2em;
   margin-bottom: 0.2em;
@@ -113,3 +103,14 @@ a {
   font-size: 0.9em;
   letter-spacing: 0.5px;
 }
+
+#patents + ul {
+  font-family:
+    "PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Noto Sans SC",
+    "Microsoft YaHei","Source Han Sans SC","Source Han Sans","Heiti SC",
+    -apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+}
+
+li a > img { vertical-align: top}
