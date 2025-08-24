@@ -73,7 +73,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
   <div class="jg" id="gallery-grid">
     <img src="/images/2023西湖.JPG" alt="2023西湖" class="gallery-img" />
     <img src="/images/2023先进班集体答辩.jpeg" alt="2023先进班集体答辩" class="gallery-img" />
-    <img src="/images/2023亚运会-工作照.jpg" alt="2023亚运会-工作照" class="gallery-img" />
+    <img src="/images/2023亚运会-工作照.JPG" alt="2023亚运会-工作照" class="gallery-img" />
     <img src="/images/2025松花江铁路大桥.jpg" alt="2025松花江铁路大桥" class="gallery-img" />
     <img src="/images/2024计算机设计大赛.JPG" alt="2024计算机设计大赛" class="gallery-img" />
     <img src="/images/2024剑桥火车站.JPG" alt="2024剑桥火车站" class="gallery-img" />
