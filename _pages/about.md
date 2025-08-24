@@ -13,7 +13,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 
 ## 💻 &nbsp;Internships {#internships}
 
-- *2025.06-Present*, [Zhejiang University](https://www.zju.edu.cn/), [Innovative Software Technology Development Center](http://eagle.zju.edu.cn/)
+- *2025.06-Present*, [Zhejiang University](https://www.zju.edu.cn/), [InnovativE SoftwAre TechnoloGy DeveLopment CEnter](http://eagle.zju.edu.cn/)
 
 ## 📰 &nbsp;Reports {#reports}
 
@@ -23,12 +23,18 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 
 ## 🔬 &nbsp;Researches {#researches}
 
-- MMLNB: Multi-Modal Learning for Neuroblastoma Subtyping Classification Assisted with Textual Description Generation [[GitHub]](https://github.com/HovChen/MMLNB) [[Paper]](https://arxiv.org/abs/2503.12927)
+- MMLNB: Multi-Modal Learning for Neuroblastoma Subtyping Classification Assisted with Textual Description Generation [![GitHub Stars](https://img.shields.io/github/stars/HovChen/MMLNB)](https://github.com/HovChen/MMLNB) [![Paper](https://img.shields.io/badge/arXiv-2503.12927-b31b1b)](https://arxiv.org/abs/2503.12927)
+
 
 ## 📦 &nbsp;Projects {#projects}
 
-- [A Paper List for Medical Reasoning Large Language Models](https://github.com/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models)
-- [A Paper List for Prototypical Learning](https://github.com/BeistMedAI/Paper-List-for-Prototypical-Learning)
+- [A Paper List for Medical Reasoning Large Language Models](https://github.com/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models) [![Stars](https://img.shields.io/github/stars/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models)](https://github.com/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models)
+- [A Paper List for Prototypical Learning](https://github.com/BeistMedAI/Paper-List-for-Prototypical-Learning) [![Stars](https://img.shields.io/github/stars/BeistMedAI/Paper-List-for-Prototypical-Learning)](https://github.com/BeistMedAI/Paper-List-for-Prototypical-Learning)
+
+## 🧾 &nbsp;Patents {#patents}
+
+- 基于自监督学习的三维医学影像异常检测方法及系统 [![已授权专利](https://img.shields.io/badge/第一发明人-已授权-brightgreen)]()
+- 一种多阶段生成医学图像问答思维链数据的方法及装置 [![已授权专利](https://img.shields.io/badge/第一发明人-已授权-brightgreen)]()
 
 ## 🏆 &nbsp;Awards {#awards}
 
@@ -71,7 +77,6 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
   <img src="/images/2025松花江铁路大桥.jpg" alt="2025松花江铁路大桥" class="gallery-img" />
 </div>
 
-<!-- Lightbox Modal -->
 <div id="img-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); justify-content:center; align-items:center;">
   <img id="modal-img" src="" alt="" style="max-width:70vw; max-height:70vh; border-radius:16px; box-shadow:0 4px 32px #222; border:6px solid #fff; object-fit:contain; background:#fff;" />
 </div>
@@ -80,7 +85,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 .gallery-scroll {
   overflow-x: auto;
   white-space: nowrap;
-  padding: 15px; /* 为滚动区域增加一些内边距 */
+  padding: 15px;
   scrollbar-height: thin;
   scrollbar-color: #b3b3b3 #f5f5f5;
   -webkit-overflow-scrolling: touch;
@@ -96,36 +101,33 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 }
 
 .gallery-img {
-  max-height: 180px; /* 设置最大高度 */
-  width: auto;   /* 宽度自适应以保持原始宽高比 */
-  height: auto;  /* 高度自适应 */
-  display: inline-block; /* 配合 white-space: nowrap 实现横向排列 */
-  margin-right: 15px; /* 图片之间的右边距 */
-  vertical-align: top; /* 图片顶部对齐 */
+  max-height: 180px;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  margin-right: 15px;
+  vertical-align: top;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   cursor: pointer;
   border: 1px solid #eee;
   transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
-  overflow: hidden; /* 确保圆角效果正确应用 */
+  overflow: hidden;
 }
 .gallery-img:last-child {
-  margin-right: 0; /* 最后一个图片不需要右边距 */
+  margin-right: 0;
 }
 .gallery-img:hover {
-  /* transform: scale(1.08) translateY(-4px); */
-  /* 取消放大和上移动画，改为轻微阴影和边框高亮 */
   box-shadow: 0 8px 32px #bbb, 0 0 0 3px #b3b3b3;
   border: 2px solid #b3b3b3;
   z-index: 10;
   background: #fff;
-  /* 保持过渡动画流畅 */
 }
 #img-modal {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 60px; /* 增加顶部内边距以避免被导航栏遮挡 */
+  padding-top: 60px;
   z-index: 9999;
 }
 #img-modal[style*="display:none"] {
