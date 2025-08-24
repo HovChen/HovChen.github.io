@@ -15,6 +15,8 @@ main:
     url: /#researches
   - title: "Projects"
     url: /#projects
+  - title: "Patents"
+    url: /#patents
   - title: "Awards"
     url: /#awards
   - title: "Competitions"
@@ -23,26 +25,3 @@ main:
     url: /#services
   - title: "Gallery"
     url: /#gallery
-  # - title: "Publications"
-  #   url: /publications/
-
-  # - title: "Portfolio"
-  #   url: /portfolio/
-
-  # - title: "Blog"
-  #   url: /blog/
-
-  # - title: "Talks"
-  #   url: /talks/    
-
-  # - title: "Teaching"
-  #   url: /teaching/
-        
-  # - title: "Blog Posts"
-  #   url: /year-archive/
-    
-  # - title: "CV"
-  #   url: /cv/
-    
-  # - title: "Guide"
-  #   url: /markdown/

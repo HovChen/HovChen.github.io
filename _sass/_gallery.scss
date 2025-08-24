@@ -1,0 +1,38 @@
+$jg-gap: 10px !default;
+$jg-radius: 10px !default;
+
+.jg {
+  position: relative;
+}
+
+.jg-row {
+  display: flex;
+  gap: $jg-gap;
+  margin-bottom: $jg-gap;
+}
+
+.jg-item {
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: $jg-radius;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+.jg-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.jg-scroll {
+  max-height: 55vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 2px;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar { width: 8px; height: 8px; }
+  &::-webkit-scrollbar-thumb { background: rgba(0,0,0,.25); border-radius: 8px; }
+  &::-webkit-scrollbar-track { background: transparent; }
+}
