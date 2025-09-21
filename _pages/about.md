@@ -9,7 +9,7 @@ redirect_from:
 
 ## 👨‍🎓 &nbsp;About Me {#about-me}
 
-I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [HDU-3DV-Lab](https://3d-v.github.io/3DV-Lab-Website/), [School of Computer Science](https://cs.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). My academic interests lie in **Medical AI**, **MLLMs** and **AI Agent**.
+I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [HDU-3DV-Lab](https://3d-v.github.io/3DV-Lab-Website/), [School of Computer Science](https://cs.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). I'm also an incoming Eng.D student at [Zhejiang University](https://www.zju.edu.cn/), jointly supervised by [Dr. Jianfeng Zhang (张建锋)](https://baike.baidu.com/item/%E5%BC%A0%E5%BB%BA%E9%94%8B/16602152) and [Prof. Jiajun Bu (卜佳俊)](https://person.zju.edu.cn/bjj). My academic interests lie in **Medical AI**, **MLLMs** and **AI Agent**.
 
 ## 💻 &nbsp;Internships {#internships}
 
@@ -57,6 +57,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - *2024.10* **Silver Medal**, China International College Students' Innovation Competition
 - *2024.11* **Third Prize**, ICT Industry-Education Integration Innovation Competition
 - *2025.07* **Two Gold Medals (one Provincial Top 10)**, Zhejiang International College Students' Innovation Competition
+- *2025.07* **Silver Medal**, Zhejiang College Students' "Challenge Cup" Extracurricular Academic Science and Technology Works Competition (AI+ Track)
 
 ## 📝 &nbsp;Services {#services}
 

@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Homepage"
 title_separator          : "-"
 name                     : &name "Huangwei Chen"
-description              : &description "A junior majoring in CS"
+description              : &description "A senior majoring in CS"
 url                      : https://huangwei-chen.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "HovChen/HovChen.github.io"
@@ -24,7 +24,7 @@ author:
   avatar           : "profile.png"
   name             : "Huangwei Chen"
   pronouns         : # example: "she/her"  
-  bio              : "A junior majoring in CS"
+  bio              : "A senior majoring in CS"
   location         : " Hangzhou, Zhejiang"
   employer         : # 
   uri              : # URL
