@@ -9,7 +9,7 @@ redirect_from:
 
 ## 👨‍🎓 &nbsp;About Me {#about-me}
 
-I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [HDU-3DV-Lab](https://3d-v.github.io/3DV-Lab-Website/), [School of Computer Science](https://cs.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). I'm also an incoming Eng.D student at [Zhejiang University](https://www.zju.edu.cn/), jointly supervised by [Dr. Jianfeng Zhang (张建锋)](https://baike.baidu.com/item/%E5%BC%A0%E5%BB%BA%E9%94%8B/16602152) and [Prof. Haishuai Wang (王海帅)](https://person.zju.edu.cn/haishuaiwang). My academic interests lie in **Medical AI**, **MLLMs** and **AI Agent**.
+I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [HDU-3DV-Lab](https://3d-v.github.io/3DV-Lab-Website/), [School of Computer Science](https://cs.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). I'm also an incoming EngD student at [Zhejiang University](https://www.zju.edu.cn/), jointly supervised by [Dr. Jianfeng Zhang (张建锋)](https://baike.baidu.com/item/%E5%BC%A0%E5%BB%BA%E9%94%8B/16602152) and [Prof. Haishuai Wang (王海帅)](https://person.zju.edu.cn/haishuaiwang). My academic interests lie in **Medical AI**, **MLLMs** and **AI Agent**.
 
 ## 💻 &nbsp;Internships {#internships}
 
@@ -23,7 +23,9 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 ## 🔬 &nbsp;Researches {#researches}
 
 - MMLNB: Multi-Modal Learning for Neuroblastoma Subtyping Classification Assisted with Textual Description Generation 
-[![GitHub Stars](https://img.shields.io/github/stars/HovChen/MMLNB)](https://github.com/HovChen/MMLNB) [![Paper](https://img.shields.io/badge/arXiv-2503.12927-b31b1b)](https://arxiv.org/abs/2503.12927)  
+[![GitHub Stars](https://img.shields.io/github/stars/HovChen/MMLNB)](https://github.com/HovChen/MMLNB) [![Paper](https://img.shields.io/badge/arXiv-2503.12927-b31b1b)](https://arxiv.org/abs/2503.12927)
+- Geodesic Prototype Matching via Diffusion Maps for Interpretable Fine-Grained Recognition
+[![Paper](https://img.shields.io/badge/arXiv-2509.17050-b31b1b)](https://arxiv.org/abs/2509.17050)
 
 ## 📦 &nbsp;Projects {#projects}
 
@@ -46,6 +48,8 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - *2024–2025* HDU "Star of Learning"
 - *2024–2025* HDU "Star of Integrity"
 - *2024–2025* HDU "Star of Tailong" Scholarship
+- *2024–2025* **National Scholarship**
+- *2024–2025* **Finalist (Top 15) in Zhejiang Provincial National Scholarship Special Evaluation**
 
 ## 🥇 &nbsp;Competitions {#competitions}
 
@@ -58,6 +62,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - *2024.11* **Third Prize**, ICT Industry-Education Integration Innovation Competition
 - *2025.07* **Two Gold Medals (one Provincial Top 10)**, Zhejiang International College Students' Innovation Competition
 - *2025.07* **Silver Medal**, Zhejiang College Students' "Challenge Cup" Extracurricular Academic Science and Technology Works Competition (AI+ Track)
+- *2025.10* **Silver Medal**, China International College Students' Innovation Competition
 
 ## 📝 &nbsp;Services {#services}
 
@@ -72,14 +77,17 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 ## 📷 &nbsp;Gallery {#gallery}
 <div class="jg-scroll">
   <div class="jg" id="gallery-grid">
+    <img src="/images/2025国特合照.JPG" alt="2025国特合照" class="gallery-img" />
+    <img src="/images/2025国特答辩.jpg" alt="2025国特答辩" class="gallery-img" />
+    <img src="/images/2025室友讨论.jpg" alt="2025室友讨论" class="gallery-img" />
+    <img src="/images/2025守正之星（竖屏）.jpg" alt="2025守正之星（竖屏）" class="gallery-img" />
+    <img src="/images/2025长白山.jpg" alt="2025长白山" class="gallery-img" />
+    <img src="/images/2025百大领奖.jpg" alt="2025百大领奖" class="gallery-img" />
     <img src="/images/2023西湖.JPG" alt="2023西湖" class="gallery-img" />
     <img src="/images/2023先进班集体答辩.jpeg" alt="2023先进班集体答辩" class="gallery-img" />
     <img src="/images/2023亚运会-工作照.JPG" alt="2023亚运会-工作照" class="gallery-img" />
     <img src="/images/2025松花江铁路大桥.jpg" alt="2025松花江铁路大桥" class="gallery-img" />
     <img src="/images/2024计算机设计大赛.JPG" alt="2024计算机设计大赛" class="gallery-img" />
     <img src="/images/2024剑桥火车站.JPG" alt="2024剑桥火车站" class="gallery-img" />
-    <img src="/images/2025守正之星（竖屏）.jpg" alt="2025守正之星（竖屏）" class="gallery-img" />
-    <img src="/images/2025长白山雪绒花公园.jpg" alt="2025长白山雪绒花公园" class="gallery-img" />
-    <img src="/images/2025百大领奖.jpg" alt="2025百大领奖" class="gallery-img" />
   </div>
 </div>
