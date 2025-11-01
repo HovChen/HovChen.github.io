@@ -48,6 +48,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - *2024–2025* HDU "Star of Learning"
 - *2024–2025* HDU "Star of Integrity"
 - *2024–2025* HDU "Star of Tailong" Scholarship
+- *2024–2025* First-class Scholarship * 2
 - *2024–2025* **National Scholarship**
 - *2024–2025* **Finalist (Top 15) in Zhejiang Provincial National Scholarship Special Evaluation**
 
