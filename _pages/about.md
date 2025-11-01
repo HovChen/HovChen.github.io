@@ -79,7 +79,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 <div class="jg-scroll">
   <div class="jg" id="gallery-grid">
     <img src="/images/2025国特合照.JPG" alt="2025国特合照" class="gallery-img" />
-    <img src="/images/2025国特答辩.jpg" alt="2025国特答辩" class="gallery-img" />
+    <img src="/images/2025国特答辩.JPG" alt="2025国特答辩" class="gallery-img" />
     <img src="/images/2025室友讨论.jpg" alt="2025室友讨论" class="gallery-img" />
     <img src="/images/2025守正之星（竖屏）.jpg" alt="2025守正之星（竖屏）" class="gallery-img" />
     <img src="/images/2025长白山.jpg" alt="2025长白山" class="gallery-img" />
