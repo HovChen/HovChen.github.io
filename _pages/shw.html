@@ -1,0 +1,719 @@
+---
+layout: null
+permalink: /shw/
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一战成硕 · 金榜题名</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold-light: #fef08a;
+            --gold-base: #fbbf24;
+            --gold-dark: #b45309;
+            --envelope-bg: #1e293b;
+        }
+
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #000000 100%);
+            overflow: hidden;
+            height: 100vh;
+            margin: 0;
+            perspective: 1200px; /* 增强3D透视感 */
+        }
+
+        /* 全屏Canvas层级管理 */
+        canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+        #bg-canvas { z-index: 0; }
+        #fireworks-canvas { z-index: 60; }
+        #cursor-canvas { z-index: 70; }
+
+        /* ---------------- 圣光特效 (God Rays) ---------------- */
+        .god-rays {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(251, 191, 36, 0.4) 0%, transparent 60%);
+            z-index: 5;
+            opacity: 0;
+            pointer-events: none;
+            mix-blend-mode: screen;
+        }
+        .ray-circle {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            background: repeating-conic-gradient(
+                from 0deg,
+                rgba(251, 191, 36, 0.3) 0deg,
+                rgba(251, 191, 36, 0) 10deg,
+                rgba(251, 191, 36, 0.3) 20deg
+            );
+            animation: rotateRays 20s linear infinite;
+        }
+        .active .god-rays {
+            animation: raysExplode 3s ease-out forwards;
+        }
+        @keyframes rotateRays { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
+        @keyframes raysExplode { 
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0); } 
+            20% { opacity: 1; transform: translate(-50%, -50%) scale(1.5); } 
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(2); } 
+        }
+
+        /* ---------------- 3D 信封容器 ---------------- */
+        .scene {
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.1s ease-out; /* 鼠标跟随的平滑度 */
+            z-index: 20;
+        }
+
+        .envelope-wrapper {
+            position: relative;
+            width: 360px;
+            height: 240px;
+            transform-style: preserve-3d;
+            cursor: pointer;
+            transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        /* 悬浮呼吸动画 */
+        .scene:not(.opened) .envelope-wrapper {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+
+        /* 点击后的状态 */
+        .scene.opened .envelope-wrapper {
+            animation: shake 0.5s ease-in-out; /* 开信震动 */
+            cursor: default;
+        }
+        .scene.opened {
+            transform: translateY(100px) scale(0.9) !important; /* 信封下移 */
+            transition: transform 1s ease;
+        }
+
+        /* 信封各部分 */
+        .envelope-body {
+            position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.1) inset;
+            z-index: 10;
+        }
+
+        .flap {
+            position: absolute; top: 0; left: 0; width: 0; height: 0;
+            border-left: 180px solid transparent;
+            border-right: 180px solid transparent;
+            border-top: 140px solid #334155;
+            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+            transform-origin: top;
+            transition: transform 0.6s 0.2s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.6s;
+            z-index: 30;
+        }
+        /* 增加翻盖纹理 */
+        .flap::after {
+            content: ''; position: absolute; top: -140px; left: -180px; width: 360px; height: 140px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.05), transparent);
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+            pointer-events: none;
+        }
+
+        .scene.opened .flap {
+            transform: rotateX(180deg);
+            z-index: 1;
+        }
+
+        /* 火漆印 (Wax Seal) */
+        .wax-seal {
+            position: absolute;
+            top: 110px; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px; height: 50px;
+            background: radial-gradient(circle at 30% 30%, #ef4444, #991b1b);
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4), inset 0 2px 5px rgba(255,255,255,0.2);
+            z-index: 35;
+            display: flex; justify-content: center; align-items: center;
+            color: rgba(255,255,255,0.8);
+            font-family: serif; font-weight: bold; font-size: 24px;
+            border: 2px dashed rgba(0,0,0,0.1);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        .scene.opened .wax-seal {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(1.5);
+            pointer-events: none;
+        }
+
+        .pocket {
+            position: absolute; bottom: 0; left: 0; width: 0; height: 0;
+            border-left: 180px solid transparent;
+            border-right: 180px solid transparent;
+            border-bottom: 130px solid #27354d;
+            z-index: 25;
+            filter: drop-shadow(0 -2px 5px rgba(0,0,0,0.2));
+            pointer-events: none;
+        }
+
+        /* ---------------- 录取通知书 (The Card) ---------------- */
+        .letter {
+            position: absolute; bottom: 5px; left: 15px;
+            width: 330px; height: 230px;
+            background: #fff;
+            /* 高级纸纹背景 */
+            background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png"), linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
+            border: 1px solid #eab308;
+            border-radius: 4px;
+            z-index: 15;
+            transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 1s;
+            transform: translateY(0) scale(0.95);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 20px;
+            box-shadow: inset 0 0 20px rgba(251, 191, 36, 0.1);
+            overflow: hidden;
+        }
+
+        /* 弹出动画 */
+        .scene.opened .letter {
+            transform: translateY(-280px) scale(1.2) rotateX(5deg);
+            z-index: 40;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 2px rgba(251, 191, 36, 0.5);
+        }
+
+        /* 流光扫过特效 (Sheen) */
+        .letter::before {
+            content: ''; position: absolute; top: 0; left: -150%; width: 100%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.6), transparent);
+            transform: skewX(-25deg);
+            transition: none;
+        }
+        .scene.opened .letter::before {
+            animation: sheen 1.5s ease-in-out 1s forwards;
+        }
+        @keyframes sheen { from { left: -150%; } to { left: 150%; } }
+
+        /* 内容样式 */
+        .letter-header { font-family: 'Times New Roman', serif; border-bottom: 2px solid #b45309; width: 100%; text-align: center; padding-bottom: 8px; margin-bottom: 15px; }
+        .letter-header h2 { font-size: 22px; color: #1e293b; letter-spacing: 2px; font-weight: 900; }
+        .letter-header p { font-size: 10px; color: #64748b; letter-spacing: 4px; text-transform: uppercase; margin-top: 2px;}
+
+        .letter-body { text-align: center; }
+        .student-name { font-size: 16px; color: #334155; margin-bottom: 8px; }
+        .admitted { 
+            font-size: 32px; font-family: 'Ma Shan Zheng', cursive; 
+            background: linear-gradient(45deg, #dc2626, #b91c1c); background-clip: text; color: transparent;
+            margin: 5px 0; text-shadow: 0 2px 4px rgba(220, 38, 38, 0.1);
+        }
+        .gold-text { color: #b45309; font-weight: bold; border-bottom: 1px dashed #b45309; padding-bottom: 2px; }
+
+        /* 盖章动画 */
+        .stamp {
+            position: absolute; bottom: 20px; right: 20px;
+            width: 80px; height: 80px;
+            border: 3px solid #dc2626; border-radius: 50%;
+            color: #dc2626; display: flex; justify-content: center; align-items: center;
+            font-size: 12px; font-weight: bold; transform: rotate(-20deg) scale(2);
+            opacity: 0; mask-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png"); /* 斑驳感 */
+        }
+        .stamp-inner { border: 1px solid #dc2626; width: 70px; height: 70px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; padding: 2px; }
+        
+        .scene.opened .stamp {
+            animation: stampIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s forwards;
+        }
+        @keyframes stampIn { to { opacity: 0.8; transform: rotate(-20deg) scale(1); } }
+
+        /* ---------------- 文字与UI ---------------- */
+        .main-title {
+            position: absolute; top: 10%; width: 100%; text-align: center;
+            opacity: 0; transform: translateY(-20px);
+            transition: opacity 1s, transform 1s;
+            z-index: 50; pointer-events: none;
+        }
+        .scene.opened ~ .main-title { opacity: 1; transform: translateY(0); }
+        
+        .title-text {
+            font-family: 'Ma Shan Zheng', cursive;
+            font-size: 5rem;
+            background: linear-gradient(to bottom, #fffbeb 40%, #fbbf24 100%);
+            background-clip: text; color: transparent;
+            filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.6));
+            letter-spacing: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem; letter-spacing: 8px; color: rgba(255,255,255,0.8);
+            margin-top: 10px; text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        /* 打字机区域 */
+        .bottom-ui {
+            position: fixed; bottom: 40px; width: 100%; text-align: center; z-index: 50;
+            opacity: 0; transition: opacity 1s 1s;
+        }
+        .scene.opened ~ .bottom-ui { opacity: 1; }
+        
+        .type-box {
+            display: inline-block;
+            background: rgba(0,0,0,0.6); backdrop-filter: blur(10px);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            padding: 15px 40px; border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .cursor { display: inline-block; width: 2px; height: 1.2em; background: #fbbf24; animation: blink 1s infinite; vertical-align: middle; }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        /* 震动动画 */
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 640px) {
+            .envelope-wrapper { width: 300px; height: 200px; }
+            .flap { border-left-width: 150px; border-right-width: 150px; border-top-width: 120px; }
+            .flap::after { top: -120px; left: -150px; width: 300px; height: 120px; }
+            .pocket { border-left-width: 150px; border-right-width: 150px; border-bottom-width: 110px; }
+            .wax-seal { top: 90px; }
+            .letter { width: 270px; height: 200px; left: 15px; }
+            .scene.opened .letter { transform: translateY(-220px) scale(1.1) rotateX(5deg); }
+            .title-text { font-size: 3.5rem; }
+            .subtitle { font-size: 1rem; letter-spacing: 4px; }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center">
+
+    <canvas id="bg-canvas"></canvas>
+    <canvas id="fireworks-canvas"></canvas>
+    <canvas id="cursor-canvas"></canvas> <div class="fixed top-6 right-6 z-[80] cursor-pointer group" onclick="toggleAudio()">
+        <div id="music-icon" class="w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-yellow-500/30 flex items-center justify-center text-yellow-400 group-hover:bg-yellow-500/20 group-hover:scale-110 transition duration-300">
+            <i class="fas fa-music"></i>
+        </div>
+        <audio id="bgm" loop>
+            <source src="https://music.163.com/song/media/outer/url?id=1386687442.mp3" type="audio/mpeg"> </audio>
+    </div>
+
+    <div class="god-rays" id="god-rays">
+        <div class="ray-circle"></div>
+    </div>
+
+    <div class="main-title">
+        <div class="title-text">金榜题名</div>
+        <div class="subtitle">ONE BATTLE TO MASTER</div>
+    </div>
+
+    <div class="scene" id="scene">
+        <div class="envelope-wrapper" id="envelope-wrapper" onclick="openEnvelope()">
+            <div class="envelope-body"></div>
+            
+            <div class="letter">
+                <div class="letter-header">
+                    <h2>录取通知书</h2>
+                    <p>ADMISSION NOTICE</p>
+                </div>
+                <div class="letter-body">
+                    <p class="student-name">亲爱的 <span class="font-bold text-black">盛泓玮</span> 同学：</p>
+                    <div class="admitted">拟录取</div>
+                    <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                        经学校研究生招生工作领导小组审定<br>
+                        你已通过 <span class="gold-text">2024年硕士研究生</span> 招生考试
+                    </p>
+                </div>
+                <div class="stamp">
+                    <div class="stamp-inner">
+                        <span style="font-size:10px; display:block;">研究生院</span>
+                        <span>录取</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pocket"></div>
+            <div class="flap"></div>
+            <div class="wax-seal">硕</div>
+        </div>
+    </div>
+
+    <div class="bottom-ui">
+        <div class="type-box">
+            <p id="typewriter" class="text-slate-200 text-sm md:text-lg font-light tracking-widest"></p>
+        </div>
+    </div>
+
+    <script>
+        // ==================== 1. 3D 视差交互 (Mouse Parallax) ====================
+        const scene = document.getElementById('scene');
+        const envelopeWrapper = document.getElementById('envelope-wrapper');
+        let isOpened = false;
+
+        document.addEventListener('mousemove', (e) => {
+            if (isOpened) return; // 打开后停止视差
+
+            const x = (window.innerWidth / 2 - e.clientX) / 25;
+            const y = (window.innerHeight / 2 - e.clientY) / 25;
+
+            envelopeWrapper.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
+        });
+
+        // ==================== 2. 开信逻辑 ====================
+        const typewriterText = [
+            "🎉考研上岸，一战成硕！🎉"
+        ];
+        
+        function openEnvelope() {
+            if (isOpened) return;
+            isOpened = true;
+
+            // 1. 界面状态变更
+            scene.classList.add('opened');
+            document.body.classList.add('active'); // 触发圣光
+            
+            // 2. 震动反馈 (如果设备支持)
+            if (navigator.vibrate) navigator.vibrate(200);
+
+            // 3. 播放音乐
+            const audio = document.getElementById('bgm');
+            if (audio.paused) toggleAudio();
+
+            // 4. 特效连招
+            setTimeout(createExplosion, 400); // 爆炸粒子
+            startFireworks(); // 持续烟花
+
+            // 5. 打字机
+            setTimeout(() => startTypewriter(0), 1500);
+        }
+
+        // ==================== 3. 打字机系统 ====================
+        const typewriterElement = document.getElementById('typewriter');
+        
+        async function startTypewriter(index) {
+            if (index >= typewriterText.length) return;
+            
+            let currentText = typewriterText[index];
+            let display = "";
+            
+            for (let i = 0; i < currentText.length; i++) {
+                display += currentText[i];
+                typewriterElement.innerHTML = display + '<span class="cursor"></span>';
+                await new Promise(r => setTimeout(r, 80));
+            }
+
+            await new Promise(r => setTimeout(r, index === typewriterText.length - 1 ? 99999 : 2500));
+            if (index < typewriterText.length - 1) startTypewriter(index + 1);
+        }
+
+        // ==================== 4. 粒子特效系统 (Background + Cursor + Boom) ====================
+        const bgCanvas = document.getElementById('bg-canvas');
+        const bgCtx = bgCanvas.getContext('2d');
+        const cCanvas = document.getElementById('cursor-canvas');
+        const cCtx = cCanvas.getContext('2d');
+        
+        let width, height;
+        let particles = []; // 背景星星
+        let trail = []; // 鼠标拖尾
+        let booms = []; // 爆炸碎片
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            bgCanvas.width = cCanvas.width = width;
+            bgCanvas.height = cCanvas.height = height;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        // 鼠标位置追踪
+        let mouse = { x: -100, y: -100 };
+        document.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+            // 移动时产生金粉
+            for(let i=0; i<2; i++) {
+                trail.push(new GoldDust(mouse.x, mouse.y));
+            }
+        });
+
+        // --- 类定义 ---
+        class Star {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = Math.random() * 2;
+                this.speed = Math.random() * 0.3 + 0.1;
+                this.alpha = Math.random();
+                this.dAlpha = (Math.random() - 0.5) * 0.02;
+            }
+            update() {
+                this.y -= this.speed;
+                this.alpha += this.dAlpha;
+                if (this.alpha > 1 || this.alpha < 0) this.dAlpha *= -1;
+                if (this.y < 0) this.reset();
+            }
+            draw() {
+                bgCtx.fillStyle = `rgba(255, 255, 255, ${Math.abs(this.alpha)})`;
+                bgCtx.beginPath();
+                bgCtx.arc(this.x, this.y, this.size, 0, Math.PI*2);
+                bgCtx.fill();
+            }
+        }
+
+        class GoldDust {
+            constructor(x, y) {
+                this.x = x + (Math.random()-0.5)*10;
+                this.y = y + (Math.random()-0.5)*10;
+                this.vx = (Math.random()-0.5) * 2;
+                this.vy = (Math.random()-0.5) * 2 + 1; // 稍微下落
+                this.life = 1;
+                this.color = `hsl(${40 + Math.random()*20}, 100%, 70%)`; // 金色范围
+                this.size = Math.random() * 3;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.life -= 0.02;
+                this.size *= 0.95;
+            }
+            draw() {
+                cCtx.fillStyle = this.color;
+                cCtx.globalAlpha = this.life;
+                cCtx.beginPath();
+                cCtx.arc(this.x, this.y, this.size, 0, Math.PI*2);
+                cCtx.fill();
+            }
+        }
+
+        class BoomParticle {
+            constructor(x, y) {
+                this.x = x; this.y = y;
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 15 + 5;
+                this.vx = Math.cos(angle) * speed;
+                this.vy = Math.sin(angle) * speed;
+                this.life = 1;
+                this.gravity = 0.5;
+                this.color = `hsl(${35 + Math.random()*30}, 100%, ${50 + Math.random()*30}%)`;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.vy += this.gravity;
+                this.vx *= 0.95;
+                this.life -= 0.015;
+            }
+            draw() {
+                cCtx.fillStyle = this.color;
+                cCtx.globalAlpha = this.life;
+                cCtx.fillRect(this.x, this.y, 4, 4); // 方形纸屑感
+            }
+        }
+
+        // 初始化背景星星
+        for(let i=0; i<200; i++) particles.push(new Star());
+
+        // 爆炸函数
+        function createExplosion() {
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            for(let i=0; i<100; i++) {
+                booms.push(new BoomParticle(centerX, centerY));
+            }
+        }
+
+        // 统一渲染循环
+        function animateParticles() {
+            bgCtx.clearRect(0, 0, width, height);
+            cCtx.clearRect(0, 0, width, height);
+
+            // 1. 背景层
+            // 偶尔画一个流星
+            if (Math.random() < 0.02) drawMeteor();
+            
+            particles.forEach(p => { p.update(); p.draw(); });
+
+            // 2. 交互层 (拖尾)
+            cCtx.globalCompositeOperation = 'lighter';
+            for (let i = trail.length - 1; i >= 0; i--) {
+                trail[i].update();
+                trail[i].draw();
+                if (trail[i].life <= 0) trail.splice(i, 1);
+            }
+
+            // 3. 爆炸层
+            for (let i = booms.length - 1; i >= 0; i--) {
+                booms[i].update();
+                booms[i].draw();
+                if (booms[i].life <= 0) booms.splice(i, 1);
+            }
+            cCtx.globalCompositeOperation = 'source-over';
+
+            requestAnimationFrame(animateParticles);
+        }
+
+        // 简单的流星逻辑
+        let meteors = [];
+        function drawMeteor() {
+             // 简化处理，直接在背景层画线即可，这里为了性能省略复杂对象
+             const x = Math.random() * width;
+             const y = Math.random() * height / 2;
+             const len = Math.random() * 80 + 20;
+             bgCtx.beginPath();
+             bgCtx.strokeStyle = "rgba(255,255,255,0.1)";
+             bgCtx.lineWidth = 2;
+             bgCtx.moveTo(x, y);
+             bgCtx.lineTo(x - len, y + len); // 左下倾斜
+             bgCtx.stroke();
+        }
+
+        animateParticles();
+
+        // ==================== 5. 高级烟花系统 ====================
+        const fwCanvas = document.getElementById('fireworks-canvas');
+        const fwCtx = fwCanvas.getContext('2d');
+        fwCanvas.width = width;
+        fwCanvas.height = height;
+        
+        let fireworks = [];
+        let sparks = [];
+        let fwActive = false;
+
+        class Firework {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = height;
+                this.targetY = Math.random() * height * 0.5;
+                this.speed = Math.random() * 3 + 8;
+                this.angle = -Math.PI / 2 + (Math.random() - 0.5) * 0.2;
+                this.vx = Math.cos(this.angle) * this.speed;
+                this.vy = Math.sin(this.angle) * this.speed;
+                this.hue = Math.random() * 360;
+                this.alive = true;
+            }
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.vy += 0.1; // 重力
+                if (this.vy >= 0 || this.y <= this.targetY) {
+                    this.alive = false;
+                    createSparks(this.x, this.y, this.hue);
+                }
+            }
+            draw() {
+                fwCtx.beginPath();
+                fwCtx.arc(this.x, this.y, 3, 0, Math.PI * 2);
+                fwCtx.fillStyle = `hsl(${this.hue}, 100%, 50%)`;
+                fwCtx.fill();
+            }
+        }
+
+        class Spark {
+            constructor(x, y, hue) {
+                this.x = x; this.y = y;
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 5 + 1;
+                this.vx = Math.cos(angle) * speed;
+                this.vy = Math.sin(angle) * speed;
+                this.friction = 0.95;
+                this.gravity = 0.1;
+                this.hue = hue;
+                this.alpha = 1;
+                this.decay = Math.random() * 0.015 + 0.01;
+            }
+            update() {
+                this.vx *= this.friction;
+                this.vy *= this.friction;
+                this.vy += this.gravity;
+                this.x += this.vx;
+                this.y += this.vy;
+                this.alpha -= this.decay;
+            }
+            draw() {
+                fwCtx.beginPath();
+                fwCtx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+                fwCtx.fillStyle = `hsla(${this.hue}, 100%, 50%, ${this.alpha})`;
+                fwCtx.fill();
+            }
+        }
+
+        function createSparks(x, y, hue) {
+            for(let i=0; i<30; i++) sparks.push(new Spark(x, y, hue));
+        }
+
+        function loopFireworks() {
+            if(!fwActive) return;
+            // 拖尾效果
+            fwCtx.globalCompositeOperation = 'destination-out';
+            fwCtx.fillStyle = 'rgba(0, 0, 0, 0.3)'; // 增加透明度，拖尾更长
+            fwCtx.fillRect(0, 0, width, height);
+            fwCtx.globalCompositeOperation = 'lighter';
+
+            if(Math.random() < 0.08) fireworks.push(new Firework());
+
+            for(let i=fireworks.length-1; i>=0; i--) {
+                fireworks[i].update();
+                fireworks[i].draw();
+                if(!fireworks[i].alive) fireworks.splice(i, 1);
+            }
+
+            for(let i=sparks.length-1; i>=0; i--) {
+                sparks[i].update();
+                sparks[i].draw();
+                if(sparks[i].alpha <= 0) sparks.splice(i, 1);
+            }
+            requestAnimationFrame(loopFireworks);
+        }
+
+        function startFireworks() {
+            fwActive = true;
+            loopFireworks();
+        }
+
+        // ==================== 6. 音频控制 ====================
+        function toggleAudio() {
+            const audio = document.getElementById('bgm');
+            const icon = document.getElementById('music-icon');
+            const iTag = icon.querySelector('i');
+            
+            if (audio.paused) {
+                audio.play();
+                icon.classList.add('animate-spin'); // Tailwind 旋转动画
+                icon.style.animationDuration = '3s';
+                iTag.classList.remove('fa-music');
+                iTag.classList.add('fa-pause');
+            } else {
+                audio.pause();
+                icon.classList.remove('animate-spin');
+                iTag.classList.remove('fa-pause');
+                iTag.classList.add('fa-music');
+            }
+        }
+    </script>
+</body>
+</html>
