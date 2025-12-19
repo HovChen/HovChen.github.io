@@ -7,7 +7,7 @@ permalink: /ChiMingjunSHANGAN/
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>一战成硕 · 金榜题名</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,8 +26,10 @@ permalink: /ChiMingjunSHANGAN/
             background: radial-gradient(circle at center, #1a1a2e 0%, #000000 100%);
             overflow: hidden;
             height: 100vh;
+            width: 100vw;
             margin: 0;
             perspective: 1200px;
+            min-height: -webkit-fill-available;
         }
 
         canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
@@ -37,18 +39,14 @@ permalink: /ChiMingjunSHANGAN/
 
         /* ---------------- 圣光特效 ---------------- */
         .god-rays {
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
             width: 800px; height: 800px;
             background: radial-gradient(circle, rgba(251, 191, 36, 0.4) 0%, transparent 60%);
             z-index: 5; opacity: 0; pointer-events: none; mix-blend-mode: screen;
         }
         .ray-circle {
-            position: absolute; top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%; height: 100%;
-            border-radius: 50%;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 100%; height: 100%; border-radius: 50%;
             background: repeating-conic-gradient(from 0deg, rgba(251, 191, 36, 0.3) 0deg, rgba(251, 191, 36, 0) 10deg, rgba(251, 191, 36, 0.3) 20deg);
             animation: rotateRays 20s linear infinite;
         }
@@ -56,21 +54,18 @@ permalink: /ChiMingjunSHANGAN/
         @keyframes rotateRays { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
         @keyframes raysExplode { 0% { opacity: 0; transform: translate(-50%, -50%) scale(0); } 20% { opacity: 1; transform: translate(-50%, -50%) scale(1.5); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(2); } }
 
-        /* ---------------- 3D 信封容器 (尺寸放大版) ---------------- */
+        /* ---------------- 3D 信封容器 ---------------- */
         .scene {
             position: relative;
             transform-style: preserve-3d;
             transition: transform 0.1s ease-out;
             z-index: 20;
-            /* 稍微下移一点，因为信封变大了 */
             top: 20px;
         }
 
-        /* 核心修改：放大尺寸 360x240 -> 540x360 */
         .envelope-wrapper {
             position: relative;
-            width: 540px; 
-            height: 360px; 
+            width: 540px; height: 360px; 
             transform-style: preserve-3d;
             cursor: pointer;
             transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -79,15 +74,8 @@ permalink: /ChiMingjunSHANGAN/
         .scene:not(.opened) .envelope-wrapper { animation: float 3s ease-in-out infinite; }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 
-        .scene.opened .envelope-wrapper {
-            animation: shake 0.5s ease-in-out;
-            cursor: default;
-        }
-        .scene.opened {
-            /* 打开后整体下移，给上面留出空间 */
-            transform: translateY(180px) scale(0.9) !important;
-            transition: transform 1s ease;
-        }
+        .scene.opened .envelope-wrapper { animation: shake 0.5s ease-in-out; cursor: default; }
+        .scene.opened { transform: translateY(180px) scale(0.9) !important; transition: transform 1s ease; }
 
         .envelope-body {
             position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
@@ -97,82 +85,52 @@ permalink: /ChiMingjunSHANGAN/
             z-index: 10;
         }
 
-        /* 核心修改：盖子尺寸匹配 */
         .flap {
             position: absolute; top: 0; left: 0; width: 0; height: 0;
-            /* 宽度的一半 = 540/2 = 270 */
-            border-left: 270px solid transparent;
-            border-right: 270px solid transparent;
-            /* 高度适当增加 */
-            border-top: 200px solid #334155;
-            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
-            transform-origin: top;
-            transition: transform 0.6s 0.2s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.6s;
-            z-index: 30;
+            border-left: 270px solid transparent; border-right: 270px solid transparent; border-top: 200px solid #334155;
+            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3)); transform-origin: top;
+            transition: transform 0.6s 0.2s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.6s; z-index: 30;
         }
         .flap::after {
-            content: ''; position: absolute; 
-            top: -200px; left: -270px; width: 540px; height: 200px;
+            content: ''; position: absolute; top: -200px; left: -270px; width: 540px; height: 200px;
             background: linear-gradient(to bottom, rgba(255,255,255,0.05), transparent);
-            clip-path: polygon(0 0, 100% 0, 50% 100%);
-            pointer-events: none;
+            clip-path: polygon(0 0, 100% 0, 50% 100%); pointer-events: none;
         }
         .scene.opened .flap { transform: rotateX(180deg); z-index: 1; }
 
-        /* 核心修改：火漆位置 */
         .wax-seal {
-            position: absolute;
-            /* 位置随盖子高度调整 */
-            top: 150px; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px; height: 60px; /* 加大火漆 */
+            position: absolute; top: 150px; left: 50%; transform: translate(-50%, -50%);
+            width: 60px; height: 60px;
             background: radial-gradient(circle at 30% 30%, #ef4444, #991b1b);
             border-radius: 50%;
             box-shadow: 0 4px 10px rgba(0,0,0,0.4), inset 0 2px 5px rgba(255,255,255,0.2);
-            z-index: 35;
-            display: flex; justify-content: center; align-items: center;
-            color: rgba(255,255,255,0.8);
-            font-family: serif; font-weight: bold; font-size: 28px;
-            border: 2px dashed rgba(0,0,0,0.1);
-            transition: opacity 0.3s, transform 0.3s;
+            z-index: 35; display: flex; justify-content: center; align-items: center;
+            color: rgba(255,255,255,0.8); font-family: serif; font-weight: bold; font-size: 28px;
+            border: 2px dashed rgba(0,0,0,0.1); transition: opacity 0.3s, transform 0.3s;
         }
         .scene.opened .wax-seal { opacity: 0; transform: translate(-50%, -50%) scale(1.5); pointer-events: none; }
 
-        /* 核心修改：口袋尺寸匹配 */
         .pocket {
             position: absolute; bottom: 0; left: 0; width: 0; height: 0;
-            border-left: 270px solid transparent;
-            border-right: 270px solid transparent;
-            border-bottom: 200px solid #27354d;
-            z-index: 25;
-            filter: drop-shadow(0 -2px 5px rgba(0,0,0,0.2));
-            pointer-events: none;
+            border-left: 270px solid transparent; border-right: 270px solid transparent; border-bottom: 200px solid #27354d;
+            z-index: 25; filter: drop-shadow(0 -2px 5px rgba(0,0,0,0.2)); pointer-events: none;
         }
 
-        /* ---------------- 录取通知书 (尺寸放大) ---------------- */
+        /* ---------------- 录取通知书 ---------------- */
         .letter {
-            position: absolute; bottom: 5px; left: 20px;
-            /* 宽度 = 540 - 40 = 500 */
-            width: 500px; 
-            height: 340px;
+            position: absolute; bottom: 5px; left: 20px; width: 500px; height: 340px;
             background: #fff;
             background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png"), linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
-            border: 1px solid #eab308;
-            border-radius: 4px;
-            z-index: 15;
-            transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 1s;
+            border: 1px solid #eab308; border-radius: 4px; z-index: 15;
+            transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 1s, height 1s ease; /* 增加 height 动画 */
             transform: translateY(0) scale(0.95);
             display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
-            padding: 30px 40px; /* 增加内边距 */
-            box-shadow: inset 0 0 20px rgba(251, 191, 36, 0.1);
-            overflow: hidden;
+            padding: 30px 40px; box-shadow: inset 0 0 20px rgba(251, 191, 36, 0.1); overflow: hidden;
         }
 
         .scene.opened .letter {
-            /* 弹出高度增加 */
             transform: translateY(-380px) scale(1.0) rotateX(5deg);
-            z-index: 40;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 2px rgba(251, 191, 36, 0.5);
+            z-index: 40; box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 2px rgba(251, 191, 36, 0.5);
         }
         
         .letter::before {
@@ -183,33 +141,27 @@ permalink: /ChiMingjunSHANGAN/
         .scene.opened .letter::before { animation: sheen 1.5s ease-in-out 1s forwards; }
         @keyframes sheen { from { left: -150%; } to { left: 150%; } }
 
-        /* 内容样式调整 */
         .letter-header { border-bottom: 2px solid #b45309; width: 100%; text-align: center; padding-bottom: 12px; margin-bottom: 20px; }
         .letter-header h2 { font-size: 28px; color: #1e293b; letter-spacing: 4px; font-weight: 900; }
         .letter-header p { font-size: 12px; color: #64748b; letter-spacing: 5px; margin-top: 5px;}
-
         .letter-body { text-align: center; width: 100%; }
         .student-name { font-size: 20px; color: #334155; margin-bottom: 15px; }
         .admitted { 
-            font-size: 48px; /* 字号加大 */
-            font-family: 'Ma Shan Zheng', cursive; 
+            font-size: 48px; font-family: 'Ma Shan Zheng', cursive; 
             background: linear-gradient(45deg, #dc2626, #b91c1c); background-clip: text; color: transparent;
             margin: 10px 0; text-shadow: 0 4px 8px rgba(220, 38, 38, 0.1);
         }
         .notice-text { font-size: 14px; color: #475569; line-height: 1.8; margin-top: 10px; }
         .gold-text { color: #b45309; font-weight: bold; border-bottom: 1px dashed #b45309; padding-bottom: 2px; font-size: 16px; }
 
-        /* 盖章动画 */
         .stamp {
-            position: absolute; bottom: 30px; right: 40px;
-            width: 100px; height: 100px; /* 印章加大 */
+            position: absolute; bottom: 30px; right: 40px; width: 100px; height: 100px;
             border: 3px solid #dc2626; border-radius: 50%;
             color: #dc2626; display: flex; justify-content: center; align-items: center;
             font-size: 14px; font-weight: bold; transform: rotate(-20deg) scale(2);
             opacity: 0; mask-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
         }
         .stamp-inner { border: 1px solid #dc2626; width: 88px; height: 88px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; padding: 2px; flex-direction: column; line-height: 1.2;}
-        
         .scene.opened .stamp { animation: stampIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s forwards; }
         @keyframes stampIn { to { opacity: 0.8; transform: rotate(-20deg) scale(1); } }
 
@@ -234,39 +186,52 @@ permalink: /ChiMingjunSHANGAN/
 
         @keyframes shake {
             0% { transform: translate(1px, 1px) rotate(0deg); }
-            10% { transform: translate(-1px, -2px) rotate(-1deg); }
-            20% { transform: translate(-3px, 0px) rotate(1deg); }
-            30% { transform: translate(3px, 2px) rotate(0deg); }
-            40% { transform: translate(1px, -1px) rotate(1deg); }
-            50% { transform: translate(-1px, 2px) rotate(-1deg); }
-            60% { transform: translate(-3px, 1px) rotate(0deg); }
-            70% { transform: translate(3px, 1px) rotate(-1deg); }
-            80% { transform: translate(-1px, -1px) rotate(1deg); }
-            90% { transform: translate(1px, 2px) rotate(0deg); }
             100% { transform: translate(1px, -2px) rotate(-1deg); }
         }
 
-        /* 移动端适配 */
+        /* ==================== 移动端适配 (核心修改) ==================== */
         @media (max-width: 640px) {
-            /* 手机上稍微缩小，但比原来大 */
-            .envelope-wrapper { width: 340px; height: 230px; }
-            .flap { border-left-width: 170px; border-right-width: 170px; border-top-width: 140px; }
-            .flap::after { top: -140px; left: -170px; width: 340px; height: 140px; }
-            .pocket { border-left-width: 170px; border-right-width: 170px; border-bottom-width: 130px; }
-            .wax-seal { top: 100px; width: 45px; height: 45px; font-size: 20px; }
-            .letter { width: 310px; height: 220px; left: 15px; padding: 15px; }
+            .envelope-wrapper { width: 320px; height: 220px; }
+            .flap { border-left-width: 160px; border-right-width: 160px; border-top-width: 130px; }
+            .flap::after { top: -130px; left: -160px; width: 320px; height: 130px; }
+            .pocket { border-left-width: 160px; border-right-width: 160px; border-bottom-width: 120px; }
+            .wax-seal { top: 90px; width: 45px; height: 45px; font-size: 20px; }
+
+            /* --- 信纸：折叠状态 (初始) --- */
+            .letter { 
+                width: 290px;
+                /* 关键点：初始高度必须小于信封高度 (220px)，这样才能被藏住 */
+                height: 180px; 
+                left: 15px; 
+                padding: 20px 15px;
+                /* 关键点：文字溢出隐藏，否则字会飘在信封外面 */
+                overflow: hidden; 
+                /* 增加 height 的过渡效果，实现“展开”动画 */
+                transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1), height 1s ease 0.2s;
+            }
+
+            /* --- 信纸：展开状态 (点击后) --- */
+            .scene.opened .letter { 
+                /* 弹出时高度变大，实现“展开” */
+                height: 400px;
+                transform: translateY(-260px) scale(1.0) rotateX(5deg); 
+            }
             
-            .scene.opened .letter { transform: translateY(-250px) scale(1.05) rotateX(5deg); }
+            .scene.opened { transform: translateY(120px) scale(1) !important; }
+
+            .letter-header h2 { font-size: 22px; margin-bottom: 5px; }
+            .letter-header p { font-size: 10px; margin-bottom: 0; }
+            .student-name { font-size: 16px; margin-bottom: 8px; }
+            .admitted { font-size: 36px; margin: 5px 0; }
+            .notice-text { font-size: 12px; line-height: 1.6; }
             
-            .letter-header h2 { font-size: 20px; }
-            .student-name { font-size: 16px; }
-            .admitted { font-size: 32px; }
-            .notice-text { font-size: 10px; }
             .stamp { width: 70px; height: 70px; right: 10px; bottom: 10px; }
             .stamp-inner { width: 60px; height: 60px; font-size: 10px; }
             
-            .title-text { font-size: 3.5rem; }
-            .subtitle { font-size: 1rem; letter-spacing: 4px; }
+            .title-text { font-size: 3rem; margin-top: 20px;}
+            .subtitle { font-size: 0.9rem; letter-spacing: 4px; }
+            .type-box { padding: 10px 20px; width: 90%; }
+            #typewriter { font-size: 14px; }
         }
     </style>
 </head>
@@ -309,6 +274,8 @@ permalink: /ChiMingjunSHANGAN/
                     <p class="notice-text">
                         经学校研究生招生工作领导小组审定<br>
                         你已通过2026年全国硕士研究生统一招生考试<br>
+                        <br>
+                        <br>
                         <span class="gold-text">一志愿上岸</span>
                     </p>
                 </div>
@@ -340,17 +307,13 @@ permalink: /ChiMingjunSHANGAN/
 
         document.addEventListener('mousemove', (e) => {
             if (isOpened) return; 
-
             const x = (window.innerWidth / 2 - e.clientX) / 25;
             const y = (window.innerHeight / 2 - e.clientY) / 25;
-
             envelopeWrapper.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
         });
 
         // ==================== 2. 开信逻辑 ====================
-        const typewriterText = [
-            "🎉考研上岸，一战成硕！🎉"
-        ];
+        const typewriterText = [ "🎉考研上岸，一战成硕！🎉" ];
         
         function openEnvelope() {
             if (isOpened) return;
@@ -375,30 +338,24 @@ permalink: /ChiMingjunSHANGAN/
         
         async function startTypewriter(index) {
             if (index >= typewriterText.length) return;
-            
             let currentText = typewriterText[index];
             let display = "";
-            
             for (let i = 0; i < currentText.length; i++) {
                 display += currentText[i];
                 typewriterElement.innerHTML = display + '<span class="cursor"></span>';
                 await new Promise(r => setTimeout(r, 80));
             }
-
             await new Promise(r => setTimeout(r, index === typewriterText.length - 1 ? 99999 : 2500));
             if (index < typewriterText.length - 1) startTypewriter(index + 1);
         }
 
-        // ==================== 4. 粒子特效系统 ====================
+        // ==================== 4. 粒子特效 ====================
         const bgCanvas = document.getElementById('bg-canvas');
         const bgCtx = bgCanvas.getContext('2d');
         const cCanvas = document.getElementById('cursor-canvas');
         const cCtx = cCanvas.getContext('2d');
-        
         let width, height;
-        let particles = []; 
-        let trail = []; 
-        let booms = []; 
+        let particles = [], trail = [], booms = []; 
 
         function resize() {
             width = window.innerWidth;
@@ -411,255 +368,114 @@ permalink: /ChiMingjunSHANGAN/
 
         let mouse = { x: -100, y: -100 };
         document.addEventListener('mousemove', (e) => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-            for(let i=0; i<2; i++) {
-                trail.push(new GoldDust(mouse.x, mouse.y));
-            }
+            mouse.x = e.clientX; mouse.y = e.clientY;
+            for(let i=0; i<2; i++) trail.push(new GoldDust(mouse.x, mouse.y));
         });
 
         class Star {
             constructor() { this.reset(); }
             reset() {
-                this.x = Math.random() * width;
-                this.y = Math.random() * height;
-                this.size = Math.random() * 2;
-                this.speed = Math.random() * 0.3 + 0.1;
-                this.alpha = Math.random();
-                this.dAlpha = (Math.random() - 0.5) * 0.02;
+                this.x = Math.random() * width; this.y = Math.random() * height;
+                this.size = Math.random() * 2; this.speed = Math.random() * 0.3 + 0.1;
+                this.alpha = Math.random(); this.dAlpha = (Math.random() - 0.5) * 0.02;
             }
             update() {
-                this.y -= this.speed;
-                this.alpha += this.dAlpha;
+                this.y -= this.speed; this.alpha += this.dAlpha;
                 if (this.alpha > 1 || this.alpha < 0) this.dAlpha *= -1;
                 if (this.y < 0) this.reset();
             }
             draw() {
                 bgCtx.fillStyle = `rgba(255, 255, 255, ${Math.abs(this.alpha)})`;
-                bgCtx.beginPath();
-                bgCtx.arc(this.x, this.y, this.size, 0, Math.PI*2);
-                bgCtx.fill();
+                bgCtx.beginPath(); bgCtx.arc(this.x, this.y, this.size, 0, Math.PI*2); bgCtx.fill();
             }
         }
-
         class GoldDust {
             constructor(x, y) {
-                this.x = x + (Math.random()-0.5)*10;
-                this.y = y + (Math.random()-0.5)*10;
-                this.vx = (Math.random()-0.5) * 2;
-                this.vy = (Math.random()-0.5) * 2 + 1; 
-                this.life = 1;
-                this.color = `hsl(${40 + Math.random()*20}, 100%, 70%)`; 
-                this.size = Math.random() * 3;
+                this.x = x + (Math.random()-0.5)*10; this.y = y + (Math.random()-0.5)*10;
+                this.vx = (Math.random()-0.5) * 2; this.vy = (Math.random()-0.5) * 2 + 1; 
+                this.life = 1; this.color = `hsl(${40 + Math.random()*20}, 100%, 70%)`; this.size = Math.random() * 3;
             }
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-                this.life -= 0.02;
-                this.size *= 0.95;
-            }
+            update() { this.x += this.vx; this.y += this.vy; this.life -= 0.02; this.size *= 0.95; }
             draw() {
-                cCtx.fillStyle = this.color;
-                cCtx.globalAlpha = this.life;
-                cCtx.beginPath();
-                cCtx.arc(this.x, this.y, this.size, 0, Math.PI*2);
-                cCtx.fill();
+                cCtx.fillStyle = this.color; cCtx.globalAlpha = this.life;
+                cCtx.beginPath(); cCtx.arc(this.x, this.y, this.size, 0, Math.PI*2); cCtx.fill();
             }
         }
-
         class BoomParticle {
             constructor(x, y) {
                 this.x = x; this.y = y;
-                const angle = Math.random() * Math.PI * 2;
-                const speed = Math.random() * 15 + 5;
-                this.vx = Math.cos(angle) * speed;
-                this.vy = Math.sin(angle) * speed;
-                this.life = 1;
-                this.gravity = 0.5;
+                const angle = Math.random() * Math.PI * 2; const speed = Math.random() * 15 + 5;
+                this.vx = Math.cos(angle) * speed; this.vy = Math.sin(angle) * speed;
+                this.life = 1; this.gravity = 0.5;
                 this.color = `hsl(${35 + Math.random()*30}, 100%, ${50 + Math.random()*30}%)`;
             }
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-                this.vy += this.gravity;
-                this.vx *= 0.95;
-                this.life -= 0.015;
-            }
-            draw() {
-                cCtx.fillStyle = this.color;
-                cCtx.globalAlpha = this.life;
-                cCtx.fillRect(this.x, this.y, 4, 4); 
-            }
+            update() { this.x += this.vx; this.y += this.vy; this.vy += this.gravity; this.vx *= 0.95; this.life -= 0.015; }
+            draw() { cCtx.fillStyle = this.color; cCtx.globalAlpha = this.life; cCtx.fillRect(this.x, this.y, 4, 4); }
         }
-
         for(let i=0; i<200; i++) particles.push(new Star());
-
         function createExplosion() {
-            const centerX = window.innerWidth / 2;
-            const centerY = window.innerHeight / 2;
-            for(let i=0; i<100; i++) {
-                booms.push(new BoomParticle(centerX, centerY));
-            }
+            const cx = window.innerWidth / 2; const cy = window.innerHeight / 2;
+            for(let i=0; i<100; i++) booms.push(new BoomParticle(cx, cy));
         }
-
         function animateParticles() {
-            bgCtx.clearRect(0, 0, width, height);
-            cCtx.clearRect(0, 0, width, height);
-
+            bgCtx.clearRect(0, 0, width, height); cCtx.clearRect(0, 0, width, height);
             if (Math.random() < 0.02) drawMeteor();
-            
             particles.forEach(p => { p.update(); p.draw(); });
-
             cCtx.globalCompositeOperation = 'lighter';
-            for (let i = trail.length - 1; i >= 0; i--) {
-                trail[i].update();
-                trail[i].draw();
-                if (trail[i].life <= 0) trail.splice(i, 1);
-            }
-
-            for (let i = booms.length - 1; i >= 0; i--) {
-                booms[i].update();
-                booms[i].draw();
-                if (booms[i].life <= 0) booms.splice(i, 1);
-            }
+            for (let i = trail.length - 1; i >= 0; i--) { trail[i].update(); trail[i].draw(); if (trail[i].life <= 0) trail.splice(i, 1); }
+            for (let i = booms.length - 1; i >= 0; i--) { booms[i].update(); booms[i].draw(); if (booms[i].life <= 0) booms.splice(i, 1); }
             cCtx.globalCompositeOperation = 'source-over';
-
             requestAnimationFrame(animateParticles);
         }
-
-        let meteors = [];
         function drawMeteor() {
-             const x = Math.random() * width;
-             const y = Math.random() * height / 2;
-             const len = Math.random() * 80 + 20;
-             bgCtx.beginPath();
-             bgCtx.strokeStyle = "rgba(255,255,255,0.1)";
-             bgCtx.lineWidth = 2;
-             bgCtx.moveTo(x, y);
-             bgCtx.lineTo(x - len, y + len); 
-             bgCtx.stroke();
+             const x = Math.random() * width; const y = Math.random() * height / 2; const len = Math.random() * 80 + 20;
+             bgCtx.beginPath(); bgCtx.strokeStyle = "rgba(255,255,255,0.1)"; bgCtx.lineWidth = 2;
+             bgCtx.moveTo(x, y); bgCtx.lineTo(x - len, y + len); bgCtx.stroke();
         }
-
         animateParticles();
 
         // ==================== 5. 烟花系统 ====================
         const fwCanvas = document.getElementById('fireworks-canvas');
         const fwCtx = fwCanvas.getContext('2d');
-        fwCanvas.width = width;
-        fwCanvas.height = height;
-        
-        let fireworks = [];
-        let sparks = [];
-        let fwActive = false;
-
+        fwCanvas.width = width; fwCanvas.height = height;
+        let fireworks = [], sparks = [], fwActive = false;
         class Firework {
             constructor() {
-                this.x = Math.random() * width;
-                this.y = height;
-                this.targetY = Math.random() * height * 0.5;
-                this.speed = Math.random() * 3 + 8;
-                this.angle = -Math.PI / 2 + (Math.random() - 0.5) * 0.2;
-                this.vx = Math.cos(this.angle) * this.speed;
-                this.vy = Math.sin(this.angle) * this.speed;
-                this.hue = Math.random() * 360;
-                this.alive = true;
+                this.x = Math.random() * width; this.y = height; this.targetY = Math.random() * height * 0.5;
+                this.speed = Math.random() * 3 + 8; this.angle = -Math.PI / 2 + (Math.random() - 0.5) * 0.2;
+                this.vx = Math.cos(this.angle) * this.speed; this.vy = Math.sin(this.angle) * this.speed;
+                this.hue = Math.random() * 360; this.alive = true;
             }
             update() {
-                this.x += this.vx;
-                this.y += this.vy;
-                this.vy += 0.1; 
-                if (this.vy >= 0 || this.y <= this.targetY) {
-                    this.alive = false;
-                    createSparks(this.x, this.y, this.hue);
-                }
+                this.x += this.vx; this.y += this.vy; this.vy += 0.1; 
+                if (this.vy >= 0 || this.y <= this.targetY) { this.alive = false; createSparks(this.x, this.y, this.hue); }
             }
-            draw() {
-                fwCtx.beginPath();
-                fwCtx.arc(this.x, this.y, 3, 0, Math.PI * 2);
-                fwCtx.fillStyle = `hsl(${this.hue}, 100%, 50%)`;
-                fwCtx.fill();
-            }
+            draw() { fwCtx.beginPath(); fwCtx.arc(this.x, this.y, 3, 0, Math.PI * 2); fwCtx.fillStyle = `hsl(${this.hue}, 100%, 50%)`; fwCtx.fill(); }
         }
-
         class Spark {
             constructor(x, y, hue) {
-                this.x = x; this.y = y;
-                const angle = Math.random() * Math.PI * 2;
-                const speed = Math.random() * 5 + 1;
-                this.vx = Math.cos(angle) * speed;
-                this.vy = Math.sin(angle) * speed;
-                this.friction = 0.95;
-                this.gravity = 0.1;
-                this.hue = hue;
-                this.alpha = 1;
-                this.decay = Math.random() * 0.015 + 0.01;
+                this.x = x; this.y = y; const angle = Math.random() * Math.PI * 2; const speed = Math.random() * 5 + 1;
+                this.vx = Math.cos(angle) * speed; this.vy = Math.sin(angle) * speed; this.friction = 0.95; this.gravity = 0.1;
+                this.hue = hue; this.alpha = 1; this.decay = Math.random() * 0.015 + 0.01;
             }
-            update() {
-                this.vx *= this.friction;
-                this.vy *= this.friction;
-                this.vy += this.gravity;
-                this.x += this.vx;
-                this.y += this.vy;
-                this.alpha -= this.decay;
-            }
-            draw() {
-                fwCtx.beginPath();
-                fwCtx.arc(this.x, this.y, 2, 0, Math.PI * 2);
-                fwCtx.fillStyle = `hsla(${this.hue}, 100%, 50%, ${this.alpha})`;
-                fwCtx.fill();
-            }
+            update() { this.vx *= this.friction; this.vy *= this.friction; this.vy += this.gravity; this.x += this.vx; this.y += this.vy; this.alpha -= this.decay; }
+            draw() { fwCtx.beginPath(); fwCtx.arc(this.x, this.y, 2, 0, Math.PI * 2); fwCtx.fillStyle = `hsla(${this.hue}, 100%, 50%, ${this.alpha})`; fwCtx.fill(); }
         }
-
-        function createSparks(x, y, hue) {
-            for(let i=0; i<30; i++) sparks.push(new Spark(x, y, hue));
-        }
-
+        function createSparks(x, y, hue) { for(let i=0; i<30; i++) sparks.push(new Spark(x, y, hue)); }
         function loopFireworks() {
             if(!fwActive) return;
-            fwCtx.globalCompositeOperation = 'destination-out';
-            fwCtx.fillStyle = 'rgba(0, 0, 0, 0.3)'; 
-            fwCtx.fillRect(0, 0, width, height);
+            fwCtx.globalCompositeOperation = 'destination-out'; fwCtx.fillStyle = 'rgba(0, 0, 0, 0.3)'; fwCtx.fillRect(0, 0, width, height);
             fwCtx.globalCompositeOperation = 'lighter';
-
             if(Math.random() < 0.08) fireworks.push(new Firework());
-
-            for(let i=fireworks.length-1; i>=0; i--) {
-                fireworks[i].update();
-                fireworks[i].draw();
-                if(!fireworks[i].alive) fireworks.splice(i, 1);
-            }
-
-            for(let i=sparks.length-1; i>=0; i--) {
-                sparks[i].update();
-                sparks[i].draw();
-                if(sparks[i].alpha <= 0) sparks.splice(i, 1);
-            }
+            for(let i=fireworks.length-1; i>=0; i--) { fireworks[i].update(); fireworks[i].draw(); if(!fireworks[i].alive) fireworks.splice(i, 1); }
+            for(let i=sparks.length-1; i>=0; i--) { sparks[i].update(); sparks[i].draw(); if(sparks[i].alpha <= 0) sparks.splice(i, 1); }
             requestAnimationFrame(loopFireworks);
         }
-
-        function startFireworks() {
-            fwActive = true;
-            loopFireworks();
-        }
-
-        // ==================== 6. 音频控制 ====================
+        function startFireworks() { fwActive = true; loopFireworks(); }
         function toggleAudio() {
-            const audio = document.getElementById('bgm');
-            const icon = document.getElementById('music-icon');
-            const iTag = icon.querySelector('i');
-            
-            if (audio.paused) {
-                audio.play();
-                icon.classList.add('animate-spin'); 
-                icon.style.animationDuration = '3s';
-                iTag.classList.remove('fa-music');
-                iTag.classList.add('fa-pause');
-            } else {
-                audio.pause();
-                icon.classList.remove('animate-spin');
-                iTag.classList.remove('fa-pause');
-                iTag.classList.add('fa-music');
-            }
+            const audio = document.getElementById('bgm'); const icon = document.getElementById('music-icon'); const iTag = icon.querySelector('i');
+            if (audio.paused) { audio.play(); icon.classList.add('animate-spin'); icon.style.animationDuration = '3s'; iTag.classList.remove('fa-music'); iTag.classList.add('fa-pause'); }
+            else { audio.pause(); icon.classList.remove('animate-spin'); iTag.classList.remove('fa-pause'); iTag.classList.add('fa-music'); }
         }
     </script>
 </body>
