@@ -27,87 +27,68 @@ permalink: /ShengHongweiSHANGAN/
             overflow: hidden;
             height: 100vh;
             margin: 0;
-            perspective: 1200px; /* 增强3D透视感 */
+            perspective: 1200px;
         }
 
-        /* 全屏Canvas层级管理 */
         canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
         #bg-canvas { z-index: 0; }
         #fireworks-canvas { z-index: 60; }
         #cursor-canvas { z-index: 70; }
 
-        /* ---------------- 圣光特效 (God Rays) ---------------- */
+        /* ---------------- 圣光特效 ---------------- */
         .god-rays {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(251, 191, 36, 0.4) 0%, transparent 60%);
-            z-index: 5;
-            opacity: 0;
-            pointer-events: none;
-            mix-blend-mode: screen;
-        }
-        .ray-circle {
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(251, 191, 36, 0.4) 0%, transparent 60%);
+            z-index: 5; opacity: 0; pointer-events: none; mix-blend-mode: screen;
+        }
+        .ray-circle {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
             width: 100%; height: 100%;
             border-radius: 50%;
-            background: repeating-conic-gradient(
-                from 0deg,
-                rgba(251, 191, 36, 0.3) 0deg,
-                rgba(251, 191, 36, 0) 10deg,
-                rgba(251, 191, 36, 0.3) 20deg
-            );
+            background: repeating-conic-gradient(from 0deg, rgba(251, 191, 36, 0.3) 0deg, rgba(251, 191, 36, 0) 10deg, rgba(251, 191, 36, 0.3) 20deg);
             animation: rotateRays 20s linear infinite;
         }
-        .active .god-rays {
-            animation: raysExplode 3s ease-out forwards;
-        }
+        .active .god-rays { animation: raysExplode 3s ease-out forwards; }
         @keyframes rotateRays { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
-        @keyframes raysExplode { 
-            0% { opacity: 0; transform: translate(-50%, -50%) scale(0); } 
-            20% { opacity: 1; transform: translate(-50%, -50%) scale(1.5); } 
-            100% { opacity: 0; transform: translate(-50%, -50%) scale(2); } 
-        }
+        @keyframes raysExplode { 0% { opacity: 0; transform: translate(-50%, -50%) scale(0); } 20% { opacity: 1; transform: translate(-50%, -50%) scale(1.5); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(2); } }
 
-        /* ---------------- 3D 信封容器 ---------------- */
+        /* ---------------- 3D 信封容器 (尺寸放大版) ---------------- */
         .scene {
             position: relative;
             transform-style: preserve-3d;
-            transition: transform 0.1s ease-out; /* 鼠标跟随的平滑度 */
+            transition: transform 0.1s ease-out;
             z-index: 20;
+            /* 稍微下移一点，因为信封变大了 */
+            top: 20px;
         }
 
+        /* 核心修改：放大尺寸 360x240 -> 540x360 */
         .envelope-wrapper {
             position: relative;
-            width: 360px;
-            height: 240px;
+            width: 540px; 
+            height: 360px; 
             transform-style: preserve-3d;
             cursor: pointer;
             transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
-        /* 悬浮呼吸动画 */
-        .scene:not(.opened) .envelope-wrapper {
-            animation: float 3s ease-in-out infinite;
-        }
+        .scene:not(.opened) .envelope-wrapper { animation: float 3s ease-in-out infinite; }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 
-        /* 点击后的状态 */
         .scene.opened .envelope-wrapper {
-            animation: shake 0.5s ease-in-out; /* 开信震动 */
+            animation: shake 0.5s ease-in-out;
             cursor: default;
         }
         .scene.opened {
-            transform: translateY(100px) scale(0.9) !important; /* 信封下移 */
+            /* 打开后整体下移，给上面留出空间 */
+            transform: translateY(180px) scale(0.9) !important;
             transition: transform 1s ease;
         }
 
-        /* 信封各部分 */
         .envelope-body {
             position: absolute; bottom: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
@@ -116,169 +97,141 @@ permalink: /ShengHongweiSHANGAN/
             z-index: 10;
         }
 
+        /* 核心修改：盖子尺寸匹配 */
         .flap {
             position: absolute; top: 0; left: 0; width: 0; height: 0;
-            border-left: 180px solid transparent;
-            border-right: 180px solid transparent;
-            border-top: 140px solid #334155;
+            /* 宽度的一半 = 540/2 = 270 */
+            border-left: 270px solid transparent;
+            border-right: 270px solid transparent;
+            /* 高度适当增加 */
+            border-top: 200px solid #334155;
             filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
             transform-origin: top;
             transition: transform 0.6s 0.2s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.6s;
             z-index: 30;
         }
-        /* 增加翻盖纹理 */
         .flap::after {
-            content: ''; position: absolute; top: -140px; left: -180px; width: 360px; height: 140px;
+            content: ''; position: absolute; 
+            top: -200px; left: -270px; width: 540px; height: 200px;
             background: linear-gradient(to bottom, rgba(255,255,255,0.05), transparent);
             clip-path: polygon(0 0, 100% 0, 50% 100%);
             pointer-events: none;
         }
+        .scene.opened .flap { transform: rotateX(180deg); z-index: 1; }
 
-        .scene.opened .flap {
-            transform: rotateX(180deg);
-            z-index: 1;
-        }
-
-        /* 火漆印 (Wax Seal) */
+        /* 核心修改：火漆位置 */
         .wax-seal {
             position: absolute;
-            top: 110px; left: 50%;
+            /* 位置随盖子高度调整 */
+            top: 150px; left: 50%;
             transform: translate(-50%, -50%);
-            width: 50px; height: 50px;
+            width: 60px; height: 60px; /* 加大火漆 */
             background: radial-gradient(circle at 30% 30%, #ef4444, #991b1b);
             border-radius: 50%;
             box-shadow: 0 4px 10px rgba(0,0,0,0.4), inset 0 2px 5px rgba(255,255,255,0.2);
             z-index: 35;
             display: flex; justify-content: center; align-items: center;
             color: rgba(255,255,255,0.8);
-            font-family: serif; font-weight: bold; font-size: 24px;
+            font-family: serif; font-weight: bold; font-size: 28px;
             border: 2px dashed rgba(0,0,0,0.1);
             transition: opacity 0.3s, transform 0.3s;
         }
-        .scene.opened .wax-seal {
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(1.5);
-            pointer-events: none;
-        }
+        .scene.opened .wax-seal { opacity: 0; transform: translate(-50%, -50%) scale(1.5); pointer-events: none; }
 
+        /* 核心修改：口袋尺寸匹配 */
         .pocket {
             position: absolute; bottom: 0; left: 0; width: 0; height: 0;
-            border-left: 180px solid transparent;
-            border-right: 180px solid transparent;
-            border-bottom: 130px solid #27354d;
+            border-left: 270px solid transparent;
+            border-right: 270px solid transparent;
+            border-bottom: 200px solid #27354d;
             z-index: 25;
             filter: drop-shadow(0 -2px 5px rgba(0,0,0,0.2));
             pointer-events: none;
         }
 
-        /* ---------------- 录取通知书 (The Card) ---------------- */
+        /* ---------------- 录取通知书 (尺寸放大) ---------------- */
         .letter {
-            position: absolute; bottom: 5px; left: 15px;
-            width: 330px; height: 230px;
+            position: absolute; bottom: 5px; left: 20px;
+            /* 宽度 = 540 - 40 = 500 */
+            width: 500px; 
+            height: 340px;
             background: #fff;
-            /* 高级纸纹背景 */
             background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png"), linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
             border: 1px solid #eab308;
             border-radius: 4px;
             z-index: 15;
             transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 1s;
             transform: translateY(0) scale(0.95);
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            padding: 20px;
+            display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+            padding: 30px 40px; /* 增加内边距 */
             box-shadow: inset 0 0 20px rgba(251, 191, 36, 0.1);
             overflow: hidden;
         }
 
-        /* 弹出动画 */
         .scene.opened .letter {
-            transform: translateY(-280px) scale(1.2) rotateX(5deg);
+            /* 弹出高度增加 */
+            transform: translateY(-380px) scale(1.0) rotateX(5deg);
             z-index: 40;
             box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 2px rgba(251, 191, 36, 0.5);
         }
-
-        /* 流光扫过特效 (Sheen) */
+        
         .letter::before {
             content: ''; position: absolute; top: 0; left: -150%; width: 100%; height: 100%;
             background: linear-gradient(to right, transparent, rgba(255,255,255,0.6), transparent);
-            transform: skewX(-25deg);
-            transition: none;
+            transform: skewX(-25deg); transition: none;
         }
-        .scene.opened .letter::before {
-            animation: sheen 1.5s ease-in-out 1s forwards;
-        }
+        .scene.opened .letter::before { animation: sheen 1.5s ease-in-out 1s forwards; }
         @keyframes sheen { from { left: -150%; } to { left: 150%; } }
 
-        /* 内容样式 */
-        .letter-header { font-family: 'Times New Roman', serif; border-bottom: 2px solid #b45309; width: 100%; text-align: center; padding-bottom: 8px; margin-bottom: 15px; }
-        .letter-header h2 { font-size: 22px; color: #1e293b; letter-spacing: 2px; font-weight: 900; }
-        .letter-header p { font-size: 10px; color: #64748b; letter-spacing: 4px; text-transform: uppercase; margin-top: 2px;}
+        /* 内容样式调整 */
+        .letter-header { border-bottom: 2px solid #b45309; width: 100%; text-align: center; padding-bottom: 12px; margin-bottom: 20px; }
+        .letter-header h2 { font-size: 28px; color: #1e293b; letter-spacing: 4px; font-weight: 900; }
+        .letter-header p { font-size: 12px; color: #64748b; letter-spacing: 5px; margin-top: 5px;}
 
-        .letter-body { text-align: center; }
-        .student-name { font-size: 16px; color: #334155; margin-bottom: 8px; }
+        .letter-body { text-align: center; width: 100%; }
+        .student-name { font-size: 20px; color: #334155; margin-bottom: 15px; }
         .admitted { 
-            font-size: 32px; font-family: 'Ma Shan Zheng', cursive; 
+            font-size: 48px; /* 字号加大 */
+            font-family: 'Ma Shan Zheng', cursive; 
             background: linear-gradient(45deg, #dc2626, #b91c1c); background-clip: text; color: transparent;
-            margin: 5px 0; text-shadow: 0 2px 4px rgba(220, 38, 38, 0.1);
+            margin: 10px 0; text-shadow: 0 4px 8px rgba(220, 38, 38, 0.1);
         }
-        .gold-text { color: #b45309; font-weight: bold; border-bottom: 1px dashed #b45309; padding-bottom: 2px; }
+        .notice-text { font-size: 14px; color: #475569; line-height: 1.8; margin-top: 10px; }
+        .gold-text { color: #b45309; font-weight: bold; border-bottom: 1px dashed #b45309; padding-bottom: 2px; font-size: 16px; }
 
         /* 盖章动画 */
         .stamp {
-            position: absolute; bottom: 20px; right: 20px;
-            width: 80px; height: 80px;
+            position: absolute; bottom: 30px; right: 40px;
+            width: 100px; height: 100px; /* 印章加大 */
             border: 3px solid #dc2626; border-radius: 50%;
             color: #dc2626; display: flex; justify-content: center; align-items: center;
-            font-size: 12px; font-weight: bold; transform: rotate(-20deg) scale(2);
-            opacity: 0; mask-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png"); /* 斑驳感 */
+            font-size: 14px; font-weight: bold; transform: rotate(-20deg) scale(2);
+            opacity: 0; mask-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
         }
-        .stamp-inner { border: 1px solid #dc2626; width: 70px; height: 70px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; padding: 2px; }
+        .stamp-inner { border: 1px solid #dc2626; width: 88px; height: 88px; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; padding: 2px; flex-direction: column; line-height: 1.2;}
         
-        .scene.opened .stamp {
-            animation: stampIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s forwards;
-        }
+        .scene.opened .stamp { animation: stampIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s forwards; }
         @keyframes stampIn { to { opacity: 0.8; transform: rotate(-20deg) scale(1); } }
 
-        /* ---------------- 文字与UI ---------------- */
+        /* 文字与UI */
         .main-title {
-            position: absolute; top: 10%; width: 100%; text-align: center;
-            opacity: 0; transform: translateY(-20px);
-            transition: opacity 1s, transform 1s;
-            z-index: 50; pointer-events: none;
+            position: absolute; top: 8%; width: 100%; text-align: center;
+            opacity: 0; transform: translateY(-20px); transition: opacity 1s, transform 1s; z-index: 50; pointer-events: none;
         }
         .scene.opened ~ .main-title { opacity: 1; transform: translateY(0); }
-        
         .title-text {
-            font-family: 'Ma Shan Zheng', cursive;
-            font-size: 5rem;
-            background: linear-gradient(to bottom, #fffbeb 40%, #fbbf24 100%);
-            background-clip: text; color: transparent;
-            filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.6));
-            letter-spacing: 10px;
+            font-family: 'Ma Shan Zheng', cursive; font-size: 5rem;
+            background: linear-gradient(to bottom, #fffbeb 40%, #fbbf24 100%); background-clip: text; color: transparent;
+            filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.6)); letter-spacing: 10px;
         }
+        .subtitle { font-size: 1.5rem; letter-spacing: 8px; color: rgba(255,255,255,0.8); margin-top: 10px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
 
-        .subtitle {
-            font-size: 1.5rem; letter-spacing: 8px; color: rgba(255,255,255,0.8);
-            margin-top: 10px; text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-        }
-
-        /* 打字机区域 */
-        .bottom-ui {
-            position: fixed; bottom: 40px; width: 100%; text-align: center; z-index: 50;
-            opacity: 0; transition: opacity 1s 1s;
-        }
+        .bottom-ui { position: fixed; bottom: 40px; width: 100%; text-align: center; z-index: 50; opacity: 0; transition: opacity 1s 1s; }
         .scene.opened ~ .bottom-ui { opacity: 1; }
-        
-        .type-box {
-            display: inline-block;
-            background: rgba(0,0,0,0.6); backdrop-filter: blur(10px);
-            border: 1px solid rgba(251, 191, 36, 0.3);
-            padding: 15px 40px; border-radius: 50px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
+        .type-box { display: inline-block; background: rgba(0,0,0,0.6); backdrop-filter: blur(10px); border: 1px solid rgba(251, 191, 36, 0.3); padding: 15px 40px; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .cursor { display: inline-block; width: 2px; height: 1.2em; background: #fbbf24; animation: blink 1s infinite; vertical-align: middle; }
         @keyframes blink { 50% { opacity: 0; } }
 
-        /* 震动动画 */
         @keyframes shake {
             0% { transform: translate(1px, 1px) rotate(0deg); }
             10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -295,13 +248,23 @@ permalink: /ShengHongweiSHANGAN/
 
         /* 移动端适配 */
         @media (max-width: 640px) {
-            .envelope-wrapper { width: 300px; height: 200px; }
-            .flap { border-left-width: 150px; border-right-width: 150px; border-top-width: 120px; }
-            .flap::after { top: -120px; left: -150px; width: 300px; height: 120px; }
-            .pocket { border-left-width: 150px; border-right-width: 150px; border-bottom-width: 110px; }
-            .wax-seal { top: 90px; }
-            .letter { width: 270px; height: 200px; left: 15px; }
-            .scene.opened .letter { transform: translateY(-220px) scale(1.1) rotateX(5deg); }
+            /* 手机上稍微缩小，但比原来大 */
+            .envelope-wrapper { width: 340px; height: 230px; }
+            .flap { border-left-width: 170px; border-right-width: 170px; border-top-width: 140px; }
+            .flap::after { top: -140px; left: -170px; width: 340px; height: 140px; }
+            .pocket { border-left-width: 170px; border-right-width: 170px; border-bottom-width: 130px; }
+            .wax-seal { top: 100px; width: 45px; height: 45px; font-size: 20px; }
+            .letter { width: 310px; height: 220px; left: 15px; padding: 15px; }
+            
+            .scene.opened .letter { transform: translateY(-250px) scale(1.05) rotateX(5deg); }
+            
+            .letter-header h2 { font-size: 20px; }
+            .student-name { font-size: 16px; }
+            .admitted { font-size: 32px; }
+            .notice-text { font-size: 10px; }
+            .stamp { width: 70px; height: 70px; right: 10px; bottom: 10px; }
+            .stamp-inner { width: 60px; height: 60px; font-size: 10px; }
+            
             .title-text { font-size: 3.5rem; }
             .subtitle { font-size: 1rem; letter-spacing: 4px; }
         }
@@ -311,12 +274,15 @@ permalink: /ShengHongweiSHANGAN/
 
     <canvas id="bg-canvas"></canvas>
     <canvas id="fireworks-canvas"></canvas>
-    <canvas id="cursor-canvas"></canvas> <div class="fixed top-6 right-6 z-[80] cursor-pointer group" onclick="toggleAudio()">
+    <canvas id="cursor-canvas"></canvas>
+
+    <div class="fixed top-6 right-6 z-[80] cursor-pointer group" onclick="toggleAudio()">
         <div id="music-icon" class="w-12 h-12 rounded-full bg-black/40 backdrop-blur-md border border-yellow-500/30 flex items-center justify-center text-yellow-400 group-hover:bg-yellow-500/20 group-hover:scale-110 transition duration-300">
             <i class="fas fa-music"></i>
         </div>
         <audio id="bgm" loop>
-            <source src="https://music.163.com/song/media/outer/url?id=1386687442.mp3" type="audio/mpeg"> </audio>
+            <source src="https://music.163.com/song/media/outer/url?id=1386687442.mp3" type="audio/mpeg">
+        </audio>
     </div>
 
     <div class="god-rays" id="god-rays">
@@ -340,7 +306,7 @@ permalink: /ShengHongweiSHANGAN/
                 <div class="letter-body">
                     <p class="student-name">亲爱的 <span class="font-bold text-black">盛泓玮</span> 同学：</p>
                     <div class="admitted">拟录取</div>
-                    <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                    <p class="notice-text">
                         经学校研究生招生工作领导小组审定<br>
                         你已通过2026年全国硕士研究生统一招生考试<br>
                         <span class="gold-text">一志愿上岸</span>
@@ -348,7 +314,7 @@ permalink: /ShengHongweiSHANGAN/
                 </div>
                 <div class="stamp">
                     <div class="stamp-inner">
-                        <span style="font-size:10px; display:block;">研究生院</span>
+                        <span style="font-size:12px; display:block; margin-bottom:2px;">研究生院</span>
                         <span>录取</span>
                     </div>
                 </div>
@@ -367,13 +333,13 @@ permalink: /ShengHongweiSHANGAN/
     </div>
 
     <script>
-        // ==================== 1. 3D 视差交互 (Mouse Parallax) ====================
+        // ==================== 1. 3D 视差交互 ====================
         const scene = document.getElementById('scene');
         const envelopeWrapper = document.getElementById('envelope-wrapper');
         let isOpened = false;
 
         document.addEventListener('mousemove', (e) => {
-            if (isOpened) return; // 打开后停止视差
+            if (isOpened) return; 
 
             const x = (window.innerWidth / 2 - e.clientX) / 25;
             const y = (window.innerHeight / 2 - e.clientY) / 25;
@@ -390,22 +356,17 @@ permalink: /ShengHongweiSHANGAN/
             if (isOpened) return;
             isOpened = true;
 
-            // 1. 界面状态变更
             scene.classList.add('opened');
-            document.body.classList.add('active'); // 触发圣光
+            document.body.classList.add('active'); 
             
-            // 2. 震动反馈 (如果设备支持)
             if (navigator.vibrate) navigator.vibrate(200);
 
-            // 3. 播放音乐
             const audio = document.getElementById('bgm');
             if (audio.paused) toggleAudio();
 
-            // 4. 特效连招
-            setTimeout(createExplosion, 400); // 爆炸粒子
-            startFireworks(); // 持续烟花
+            setTimeout(createExplosion, 400); 
+            startFireworks(); 
 
-            // 5. 打字机
             setTimeout(() => startTypewriter(0), 1500);
         }
 
@@ -428,16 +389,16 @@ permalink: /ShengHongweiSHANGAN/
             if (index < typewriterText.length - 1) startTypewriter(index + 1);
         }
 
-        // ==================== 4. 粒子特效系统 (Background + Cursor + Boom) ====================
+        // ==================== 4. 粒子特效系统 ====================
         const bgCanvas = document.getElementById('bg-canvas');
         const bgCtx = bgCanvas.getContext('2d');
         const cCanvas = document.getElementById('cursor-canvas');
         const cCtx = cCanvas.getContext('2d');
         
         let width, height;
-        let particles = []; // 背景星星
-        let trail = []; // 鼠标拖尾
-        let booms = []; // 爆炸碎片
+        let particles = []; 
+        let trail = []; 
+        let booms = []; 
 
         function resize() {
             width = window.innerWidth;
@@ -448,22 +409,17 @@ permalink: /ShengHongweiSHANGAN/
         window.addEventListener('resize', resize);
         resize();
 
-        // 鼠标位置追踪
         let mouse = { x: -100, y: -100 };
         document.addEventListener('mousemove', (e) => {
             mouse.x = e.clientX;
             mouse.y = e.clientY;
-            // 移动时产生金粉
             for(let i=0; i<2; i++) {
                 trail.push(new GoldDust(mouse.x, mouse.y));
             }
         });
 
-        // --- 类定义 ---
         class Star {
-            constructor() {
-                this.reset();
-            }
+            constructor() { this.reset(); }
             reset() {
                 this.x = Math.random() * width;
                 this.y = Math.random() * height;
@@ -491,9 +447,9 @@ permalink: /ShengHongweiSHANGAN/
                 this.x = x + (Math.random()-0.5)*10;
                 this.y = y + (Math.random()-0.5)*10;
                 this.vx = (Math.random()-0.5) * 2;
-                this.vy = (Math.random()-0.5) * 2 + 1; // 稍微下落
+                this.vy = (Math.random()-0.5) * 2 + 1; 
                 this.life = 1;
-                this.color = `hsl(${40 + Math.random()*20}, 100%, 70%)`; // 金色范围
+                this.color = `hsl(${40 + Math.random()*20}, 100%, 70%)`; 
                 this.size = Math.random() * 3;
             }
             update() {
@@ -532,14 +488,12 @@ permalink: /ShengHongweiSHANGAN/
             draw() {
                 cCtx.fillStyle = this.color;
                 cCtx.globalAlpha = this.life;
-                cCtx.fillRect(this.x, this.y, 4, 4); // 方形纸屑感
+                cCtx.fillRect(this.x, this.y, 4, 4); 
             }
         }
 
-        // 初始化背景星星
         for(let i=0; i<200; i++) particles.push(new Star());
 
-        // 爆炸函数
         function createExplosion() {
             const centerX = window.innerWidth / 2;
             const centerY = window.innerHeight / 2;
@@ -548,18 +502,14 @@ permalink: /ShengHongweiSHANGAN/
             }
         }
 
-        // 统一渲染循环
         function animateParticles() {
             bgCtx.clearRect(0, 0, width, height);
             cCtx.clearRect(0, 0, width, height);
 
-            // 1. 背景层
-            // 偶尔画一个流星
             if (Math.random() < 0.02) drawMeteor();
             
             particles.forEach(p => { p.update(); p.draw(); });
 
-            // 2. 交互层 (拖尾)
             cCtx.globalCompositeOperation = 'lighter';
             for (let i = trail.length - 1; i >= 0; i--) {
                 trail[i].update();
@@ -567,7 +517,6 @@ permalink: /ShengHongweiSHANGAN/
                 if (trail[i].life <= 0) trail.splice(i, 1);
             }
 
-            // 3. 爆炸层
             for (let i = booms.length - 1; i >= 0; i--) {
                 booms[i].update();
                 booms[i].draw();
@@ -578,10 +527,8 @@ permalink: /ShengHongweiSHANGAN/
             requestAnimationFrame(animateParticles);
         }
 
-        // 简单的流星逻辑
         let meteors = [];
         function drawMeteor() {
-             // 简化处理，直接在背景层画线即可，这里为了性能省略复杂对象
              const x = Math.random() * width;
              const y = Math.random() * height / 2;
              const len = Math.random() * 80 + 20;
@@ -589,13 +536,13 @@ permalink: /ShengHongweiSHANGAN/
              bgCtx.strokeStyle = "rgba(255,255,255,0.1)";
              bgCtx.lineWidth = 2;
              bgCtx.moveTo(x, y);
-             bgCtx.lineTo(x - len, y + len); // 左下倾斜
+             bgCtx.lineTo(x - len, y + len); 
              bgCtx.stroke();
         }
 
         animateParticles();
 
-        // ==================== 5. 高级烟花系统 ====================
+        // ==================== 5. 烟花系统 ====================
         const fwCanvas = document.getElementById('fireworks-canvas');
         const fwCtx = fwCanvas.getContext('2d');
         fwCanvas.width = width;
@@ -620,7 +567,7 @@ permalink: /ShengHongweiSHANGAN/
             update() {
                 this.x += this.vx;
                 this.y += this.vy;
-                this.vy += 0.1; // 重力
+                this.vy += 0.1; 
                 if (this.vy >= 0 || this.y <= this.targetY) {
                     this.alive = false;
                     createSparks(this.x, this.y, this.hue);
@@ -669,9 +616,8 @@ permalink: /ShengHongweiSHANGAN/
 
         function loopFireworks() {
             if(!fwActive) return;
-            // 拖尾效果
             fwCtx.globalCompositeOperation = 'destination-out';
-            fwCtx.fillStyle = 'rgba(0, 0, 0, 0.3)'; // 增加透明度，拖尾更长
+            fwCtx.fillStyle = 'rgba(0, 0, 0, 0.3)'; 
             fwCtx.fillRect(0, 0, width, height);
             fwCtx.globalCompositeOperation = 'lighter';
 
@@ -704,7 +650,7 @@ permalink: /ShengHongweiSHANGAN/
             
             if (audio.paused) {
                 audio.play();
-                icon.classList.add('animate-spin'); // Tailwind 旋转动画
+                icon.classList.add('animate-spin'); 
                 icon.style.animationDuration = '3s';
                 iTag.classList.remove('fa-music');
                 iTag.classList.add('fa-pause');
