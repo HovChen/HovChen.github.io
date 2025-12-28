@@ -15,6 +15,9 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 
 - *2025.06-Present*, [Zhejiang University](https://www.zju.edu.cn/), [InnovativE SoftwAre TechnoloGy DeveLopment CEnter](http://eagle.zju.edu.cn/)
 
+## 🔥 &nbsp;News {#news}
+- *2025.12.23*: 🎉🎉 Our paper has been accepted by EAU 2026 (**Oral**)!
+
 ## 📰 &nbsp;Reports {#reports}
 
 - [![报道-澎湃新闻](https://img.shields.io/badge/%E6%8A%A5%E9%81%93-%E6%BE%8E%E6%B9%83%E6%96%B0%E9%97%BB-blue?style=flat-square)](https://m.thepaper.cn/newsDetail_forward_30536383) [在杭电，看见奋斗足迹 ｜ 陈黄未：奔跑在“用AI解决领域痛点”的道路上](https://m.thepaper.cn/newsDetail_forward_30536383)

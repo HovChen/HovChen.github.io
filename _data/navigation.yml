@@ -9,6 +9,8 @@ main:
     url: /#about-me
   - title: "Internships"
     url: /#internships
+  - title: "News"
+    url: /#news
   - title: "Reports"
     url: /#reports
   - title: "Researches"
