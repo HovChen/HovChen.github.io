@@ -13,8 +13,8 @@ main:
     url: /#news
   - title: "Reports"
     url: /#reports
-  - title: "Researches"
-    url: /#researches
+  - title: "Publications"
+    url: /#publications
   - title: "Projects"
     url: /#projects
   - title: "Patents"

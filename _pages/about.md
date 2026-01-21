@@ -16,19 +16,20 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - *2025.06-Present*, [Zhejiang University](https://www.zju.edu.cn/), [InnovativE SoftwAre TechnoloGy DeveLopment CEnter](http://eagle.zju.edu.cn/)
 
 ## 🔥 &nbsp;News {#news}
-- *2025.12.23*: 🎉🎉 Our paper has been accepted by EAU 2026 (**Oral**)!
+- *2026.01* :🎉🎉 Our paper has been accepted by (ICASSP 2026)[https://2026.ieeeicassp.org/]!
+- *2025.12*: 🎉🎉 Our paper has been accepted by (EAU 2026)[https://eaucongress.uroweb.org/] (**Oral**)!
 
 ## 📰 &nbsp;Reports {#reports}
 
 - [![报道-澎湃新闻](https://img.shields.io/badge/%E6%8A%A5%E9%81%93-%E6%BE%8E%E6%B9%83%E6%96%B0%E9%97%BB-blue?style=flat-square)](https://m.thepaper.cn/newsDetail_forward_30536383) [在杭电，看见奋斗足迹 ｜ 陈黄未：奔跑在“用AI解决领域痛点”的道路上](https://m.thepaper.cn/newsDetail_forward_30536383)
 - [![报道-央广网](https://img.shields.io/badge/%E6%8A%A5%E9%81%93-%E5%A4%AE%E5%B9%BF%E7%BD%91-red?style=flat-square)](https://zj.cnr.cn/gedilianbo/ls/20240806/t20240806_526836807.shtml) [中外学子对话黄帝文化，探寻乡村蝶变密码](https://zj.cnr.cn/gedilianbo/ls/20240806/t20240806_526836807.shtml)
 
-## 🔬 &nbsp;Researches {#researches}
+## 🔬 &nbsp;Publications {#publications}
 
 - MMLNB: Multi-Modal Learning for Neuroblastoma Subtyping Classification Assisted with Textual Description Generation 
 [![GitHub Stars](https://img.shields.io/github/stars/HovChen/MMLNB)](https://github.com/HovChen/MMLNB) [![Paper](https://img.shields.io/badge/arXiv-2503.12927-b31b1b)](https://arxiv.org/abs/2503.12927)
 - Geodesic Prototype Matching via Diffusion Maps for Interpretable Fine-Grained Recognition
-[![Paper](https://img.shields.io/badge/arXiv-2509.17050-b31b1b)](https://arxiv.org/abs/2509.17050)
+[![Paper](https://img.shields.io/badge/ICASSP-2026-026b80)](https://arxiv.org/abs/2509.17050)
 
 ## 📦 &nbsp;Projects {#projects}
 
