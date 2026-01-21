@@ -40,6 +40,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 
 - [![](https://img.shields.io/badge/第一发明人-已授权-brightgreen?style=flat-square)](https://www.cnipa.gov.cn) 基于自监督学习的三维医学影像异常检测方法及系统
 - [![](https://img.shields.io/badge/第一发明人-已授权-brightgreen?style=flat-square)](https://www.cnipa.gov.cn) 一种多阶段生成医学图像问答思维链数据的方法及装置  
+- [![](https://img.shields.io/badge/第二发明人-已公开-blue?style=flat-square)](https://www.cnipa.gov.cn) 一种多模态人工智能虚拟病人问诊教学系统 
 
 ## 🏆 &nbsp;Awards {#awards}
 
