@@ -16,8 +16,8 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - *2025.06-Present*, [Zhejiang University](https://www.zju.edu.cn/), [InnovativE SoftwAre TechnoloGy DeveLopment CEnter](http://eagle.zju.edu.cn/)
 
 ## 🔥 &nbsp;News {#news}
-- *2026.01* :🎉🎉 Our paper has been accepted by (ICASSP 2026)[https://2026.ieeeicassp.org/]!
-- *2025.12*: 🎉🎉 Our paper has been accepted by (EAU 2026)[https://eaucongress.uroweb.org/] (**Oral**)!
+- *2026.01* :🎉🎉 Our paper has been accepted by [ICASSP 2026](https://2026.ieeeicassp.org/)!
+- *2025.12*: 🎉🎉 Our paper has been accepted by [EAU 2026](https://eaucongress.uroweb.org/) (**Oral**)!
 
 ## 📰 &nbsp;Reports {#reports}
 
