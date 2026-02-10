@@ -59,25 +59,15 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 
 ## 🥇 &nbsp;Competitions {#competitions}
 
-- *2023.05* **First Prize**, MathorCup Mathematical Modeling Competition
-- *2024.01* **First Prize**, Asia-Pacific Mathematical Modeling Competition
 - *2024.05* **Meritorious Winner**, Interdisciplinary Contest in Modeling (ICM)
-- *2024.05* **Third Prize**, Service Outsourcing and Entrepreneurship Innovation Competition
-- *2024.07* **Third Prize**, Chinese Collegiate Computing Competition
 - *2024.10* **Silver Medal**, China International College Students' Innovation Competition
-- *2024.11* **Third Prize**, ICT Industry-Education Integration Innovation Competition
 - *2025.07* **Two Gold Medals (one Provincial Top 10)**, Zhejiang International College Students' Innovation Competition
 - *2025.07* **Silver Medal**, Zhejiang College Students' "Challenge Cup" Extracurricular Academic Science and Technology Works Competition (AI+ Track)
 - *2025.10* **Silver Medal**, China International College Students' Innovation Competition
 
 ## 📝 &nbsp;Services {#services}
 
-- *2022–2026* **Secretary**, Youth League Branch, Class 22052320, HDUCS
 - *2024–2025* **Deputy Secretary**, 19th Youth League Committee, HDUCS
-- *2024–2025* **Member**, 9th Student Committee, HDU
-- *2024–2025* **Secretary**, Youth League Branch, 11th Youth Marxism Elite Program, HDU
-- *2024–2025* **Assistant Class Advisor**, Class 24050513, HDUCS
-- *2024–2025* **Campus Integrity Culture Officer**, HDU Publicity Department
 - *2025–2026* **Youth Pioneer Ambassador for Cross-cultural Exchange**, HDU International Office
 
 ## 📷 &nbsp;Gallery {#gallery}
