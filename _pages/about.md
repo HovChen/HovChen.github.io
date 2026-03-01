@@ -30,6 +30,8 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 [![GitHub Stars](https://img.shields.io/github/stars/HovChen/MMLNB)](https://github.com/HovChen/MMLNB) [![Paper](https://img.shields.io/badge/arXiv-2503.12927-b31b1b)](https://arxiv.org/abs/2503.12927)
 - Geodesic Prototype Matching via Diffusion Maps for Interpretable Fine-Grained Recognition
 [![Paper](https://img.shields.io/badge/ICASSP-2026-026b80)](https://arxiv.org/abs/2509.17050)
+- Directed Ordinal Diffusion Regularization for Progression-Aware Diabetic Retinopathy Grading
+[![GitHub Stars](https://img.shields.io/github/stars/HovChen/D-ODR)](https://github.com/HovChen/D-ODR) [![Paper](https://img.shields.io/badge/arXiv-2602.21942-b31b1b)](https://arxiv.org/abs/2602.21942)
 
 ## 📦 &nbsp;Projects {#projects}
 
