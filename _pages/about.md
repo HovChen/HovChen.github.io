@@ -32,6 +32,10 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 [![Paper](https://img.shields.io/badge/ICASSP-2026-026b80)](https://arxiv.org/abs/2509.17050)
 - Directed Ordinal Diffusion Regularization for Progression-Aware Diabetic Retinopathy Grading
 [![GitHub Stars](https://img.shields.io/github/stars/HovChen/D-ODR)](https://github.com/HovChen/D-ODR) [![Paper](https://img.shields.io/badge/arXiv-2602.21942-b31b1b)](https://arxiv.org/abs/2602.21942)
+- Unsupervised Causal Prototypical Networks for De-biased Interpretable Dermoscopy Diagnosis
+[![Paper](https://img.shields.io/badge/arXiv-2602.23752-026b80)](https://arxiv.org/abs/2602.23752)
+- MedCollab: Causal-Driven Multi-Agent Collaboration for Full-Cycle Clinical Diagnosis via IBIS-Structured Argumentation
+[![Paper](https://img.shields.io/badge/arXiv-2603.01131-026b80)](https://arxiv.org/abs/2603.01131)
 
 ## 📦 &nbsp;Projects {#projects}
 
@@ -43,6 +47,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - [![](https://img.shields.io/badge/第一发明人-已授权-brightgreen?style=flat-square)](https://www.cnipa.gov.cn) 基于自监督学习的三维医学影像异常检测方法及系统
 - [![](https://img.shields.io/badge/第一发明人-已授权-brightgreen?style=flat-square)](https://www.cnipa.gov.cn) 一种多阶段生成医学图像问答思维链数据的方法及装置  
 - [![](https://img.shields.io/badge/第二发明人-已公开-blue?style=flat-square)](https://www.cnipa.gov.cn) 一种多模态人工智能虚拟病人问诊教学系统 
+- [![](https://img.shields.io/badge/第二发明人-已公开-blue?style=flat-square)](https://www.cnipa.gov.cn) 一种基于多智能体协作的泌尿外科预问诊方法和系统
 
 ## 🏆 &nbsp;Awards {#awards}
 
