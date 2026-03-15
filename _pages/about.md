@@ -33,9 +33,9 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - Directed Ordinal Diffusion Regularization for Progression-Aware Diabetic Retinopathy Grading
 [![GitHub Stars](https://img.shields.io/github/stars/HovChen/D-ODR)](https://github.com/HovChen/D-ODR) [![Paper](https://img.shields.io/badge/arXiv-2602.21942-b31b1b)](https://arxiv.org/abs/2602.21942)
 - Unsupervised Causal Prototypical Networks for De-biased Interpretable Dermoscopy Diagnosis
-[![Paper](https://img.shields.io/badge/arXiv-2602.23752-026b80)](https://arxiv.org/abs/2602.23752)
+[![Paper](https://img.shields.io/badge/arXiv-2602.23752-b31b1b)](https://arxiv.org/abs/2602.23752)
 - MedCollab: Causal-Driven Multi-Agent Collaboration for Full-Cycle Clinical Diagnosis via IBIS-Structured Argumentation
-[![Paper](https://img.shields.io/badge/arXiv-2603.01131-026b80)](https://arxiv.org/abs/2603.01131)
+[![Paper](https://img.shields.io/badge/arXiv-2603.01131-b31b1b)](https://arxiv.org/abs/2603.01131)
 
 ## 📦 &nbsp;Projects {#projects}
 
