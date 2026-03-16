@@ -7,6 +7,12 @@ redirect_from:
   - /about.html
 ---
 
+<style>
+  .page__content strong {
+    color: #cc1f03;
+  }
+</style>
+
 ## 👨‍🎓 &nbsp;About Me {#about-me}
 
 I am an undergraduate student majoring in **Computer Science and Technology** at **Hangzhou Dianzi University** (2022-2026). I'm currently advised by [Prof. Feiwei Qin (秦飞巍)](https://faculty.hdu.edu.cn/jsjxy/qfw/main.htm) from [HDU-3DV-Lab](https://3d-v.github.io/3DV-Lab-Website/), [School of Computer Science](https://cs.hdu.edu.cn/), [Hangzhou Dianzi University](https://www.hdu.edu.cn/main.htm). I'm also an incoming EngD student at [Zhejiang University](https://www.zju.edu.cn/), jointly supervised by [Dr. Jianfeng Zhang (张建锋)](https://baike.baidu.com/item/%E5%BC%A0%E5%BB%BA%E9%94%8B/16602152) and [Prof. Haishuai Wang (王海帅)](https://person.zju.edu.cn/haishuaiwang). My academic interests lie in **Medical AI**, **MLLMs** and **AI Agent**.
@@ -16,9 +22,15 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - *2025.06-Present*, [Zhejiang University](https://www.zju.edu.cn/), [InnovativE SoftwAre TechnoloGy DeveLopment CEnter](http://eagle.zju.edu.cn/)
 
 ## 🔥 &nbsp;News {#news}
-- *2026.01* :🎉🎉 Our paper has been accepted by [ICASSP 2026](https://2026.ieeeicassp.org/)!
-- *2025.12*: 🎉🎉 Our paper has been accepted by [EAU 2026](https://eaucongress.uroweb.org/) (**Oral**)!
-
+<div style="max-height: 300px; overflow: auto; font-size: 15px;">
+	<ul>
+		<li><i>2026.03</i>: &nbsp;🎉🎉 Our paper for <a href="https://2026.ieeeicassp.org/">ICASSP 2026</a> has been selected for <strong>Oral Presentation</strong>!</li>
+		<li><i>2026.01</i>: &nbsp;🎉🎉 Our paper has been accepted by <a href="https://2026.ieeeicassp.org/">ICASSP 2026</a>!</li>
+		<li><i>2025.12</i>: &nbsp;🎉🎉 Our paper for <a href="https://eaucongress.uroweb.org">EAU 26</a> has been selected for <strong>Oral Presentation</strong>!</li>
+		<li><i>2025.12</i>: &nbsp;🎉🎉 Our paper has been accepted by <a href="https://eaucongress.uroweb.org">EAU 26</a>!</li>
+	</ul>
+</div>
+<!-- <div style="margin-top: 5px; font-size: small; margin-bottom: 0px;">⬆ Scrollable</div> -->
 ## 📰 &nbsp;Reports {#reports}
 
 - [![报道-澎湃新闻](https://img.shields.io/badge/%E6%8A%A5%E9%81%93-%E6%BE%8E%E6%B9%83%E6%96%B0%E9%97%BB-blue?style=flat-square)](https://m.thepaper.cn/newsDetail_forward_30536383) [在杭电，看见奋斗足迹 ｜ 陈黄未：奔跑在“用AI解决领域痛点”的道路上](https://m.thepaper.cn/newsDetail_forward_30536383)
