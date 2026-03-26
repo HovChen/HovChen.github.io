@@ -48,6 +48,8 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 [![Paper](https://img.shields.io/badge/arXiv-2602.23752-b31b1b)](https://arxiv.org/abs/2602.23752)
 - MedCollab: Causal-Driven Multi-Agent Collaboration for Full-Cycle Clinical Diagnosis via IBIS-Structured Argumentation
 [![Paper](https://img.shields.io/badge/arXiv-2603.01131-b31b1b)](https://arxiv.org/abs/2603.01131)
+- UroMAS: A multi-agent system for automated patient interview, clinical documentation, and initial management planning in urolithiasis
+[![Paper](https://img.shields.io/badge/European-Urology-e87124)](https://doi.org/10.1016/S0302-2838(26)00476-8)
 
 ## 📦 &nbsp;Projects {#projects}
 
