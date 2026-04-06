@@ -24,6 +24,8 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 ## 🔥 &nbsp;News {#news}
 <div style="max-height: 300px; overflow: auto; font-size: 15px;">
 	<ul>
+    <li><i>2026.04</i>: &nbsp;🎉🎉 Our paper for <a href="https://2026.aclweb.org/">ACL 2026</a> has been selected for <strong>Oral Presentation</strong>!</li>
+    <li><i>2026.04</i>: &nbsp;🎉🎉 Our 2 papers have been accepted by <a href="https://2026.aclweb.org/">ACL 2026</a>!</li>
 		<li><i>2026.03</i>: &nbsp;🎉🎉 Our paper for <a href="https://2026.ieeeicassp.org/">ICASSP 2026</a> has been selected for <strong>Oral Presentation</strong>!</li>
 		<li><i>2026.01</i>: &nbsp;🎉🎉 Our paper has been accepted by <a href="https://2026.ieeeicassp.org/">ICASSP 2026</a>!</li>
 		<li><i>2025.12</i>: &nbsp;🎉🎉 Our paper for <a href="https://eaucongress.uroweb.org">EAU 26</a> has been selected for <strong>Oral Presentation</strong>!</li>
