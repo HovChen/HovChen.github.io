@@ -15,8 +15,6 @@ main:
     url: /#reports
   - title: "Publications"
     url: /#publications
-  - title: "Projects"
-    url: /#projects
   - title: "Patents"
     url: /#patents
   - title: "Awards"

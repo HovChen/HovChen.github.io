@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Huangwei Chen's Homepage"
+title: "Huangwei Chen (陈黄未)"
 author_profile: true
 redirect_from:
   - /about/
@@ -8,6 +8,22 @@ redirect_from:
 ---
 
 <style>
+  #main {
+    margin-top: 2em;
+  }
+
+  .page__inner-wrap > header {
+    display: none;
+  }
+
+  .page__inner-wrap {
+    margin-top: -4em;
+  }
+
+  .page__content > :first-child {
+    margin-top: 0;
+  }
+
   .page__content strong {
     color: #cc1f03;
   }
@@ -28,8 +44,8 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
     <li><i>2026.04</i>: &nbsp;🎉🎉 Our 2 papers have been accepted by <a href="https://2026.aclweb.org/">ACL 2026</a>!</li>
 		<li><i>2026.03</i>: &nbsp;🎉🎉 Our paper for <a href="https://2026.ieeeicassp.org/">ICASSP 2026</a> has been selected for <strong>Oral Presentation</strong>!</li>
 		<li><i>2026.01</i>: &nbsp;🎉🎉 Our paper has been accepted by <a href="https://2026.ieeeicassp.org/">ICASSP 2026</a>!</li>
-		<li><i>2025.12</i>: &nbsp;🎉🎉 Our paper for <a href="https://eaucongress.uroweb.org">EAU 26</a> has been selected for <strong>Oral Presentation</strong>!</li>
-		<li><i>2025.12</i>: &nbsp;🎉🎉 Our paper has been accepted by <a href="https://eaucongress.uroweb.org">EAU 26</a>!</li>
+		<li><i>2025.12</i>: &nbsp;🎉🎉 Our abstract for <a href="https://eaucongress.uroweb.org">EAU 26</a> has been selected for <strong>Oral Presentation</strong>!</li>
+		<li><i>2025.12</i>: &nbsp;🎉🎉 Our abstract has been accepted by <a href="https://eaucongress.uroweb.org">EAU 26</a>!</li>
 	</ul>
 </div>
 <!-- <div style="margin-top: 5px; font-size: small; margin-bottom: 0px;">⬆ Scrollable</div> -->
@@ -40,25 +56,120 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 
 ## 🔬 &nbsp;Publications {#publications}
 
-- MMLNB: Multi-Modal Learning for Neuroblastoma Subtyping Classification Assisted with Textual Description Generation 
-[![GitHub Stars](https://img.shields.io/github/stars/HovChen/MMLNB)](https://github.com/HovChen/MMLNB) [![Paper](https://img.shields.io/badge/arXiv-2503.12927-b31b1b)](https://arxiv.org/abs/2503.12927)
-- Geodesic Prototype Matching via Diffusion Maps for Interpretable Fine-Grained Recognition
-[![Paper](https://img.shields.io/badge/ICASSP-2026-026b80)](https://arxiv.org/abs/2509.17050)
-- Directed Ordinal Diffusion Regularization for Progression-Aware Diabetic Retinopathy Grading
-[![GitHub Stars](https://img.shields.io/github/stars/HovChen/D-ODR)](https://github.com/HovChen/D-ODR) [![Paper](https://img.shields.io/badge/arXiv-2602.21942-b31b1b)](https://arxiv.org/abs/2602.21942)
-- Unsupervised Causal Prototypical Networks for De-biased Interpretable Dermoscopy Diagnosis
-[![Paper](https://img.shields.io/badge/arXiv-2602.23752-b31b1b)](https://arxiv.org/abs/2602.23752)
-- MedCollab: Causal-Driven Multi-Agent Collaboration for Full-Cycle Clinical Diagnosis via IBIS-Structured Argumentation
-[![Paper](https://img.shields.io/badge/arXiv-2603.01131-b31b1b)](https://arxiv.org/abs/2603.01131)
-- UroMAS: A multi-agent system for automated patient interview, clinical documentation, and initial management planning in urolithiasis
-[![Paper](https://img.shields.io/badge/European-Urology-e87124)](https://doi.org/10.1016/S0302-2838(26)00476-8)
-- Sci-Mind: Cognitively-Inspired Adversarial Debate for Autonomous Mathematical Modeling
-[![Paper](https://img.shields.io/badge/arXiv-2603.27584-b31b1b)](https://arxiv.org/abs/2603.27584)
+<div class="pub-list">
+  <div class="pub-card">
+    <div class="pub-card__main">
+      <div class="pub-card__title">Geodesic Prototype Matching via Diffusion Maps for Interpretable Fine-Grained Recognition</div>
+      <div class="pub-card__authors">Junhao Jia, Yunyou Liu, Yifei Sun, <strong>Huangwei Chen</strong>, Feiwei Qin<sup>&dagger;</sup>, Changmiao Wang, Yong Peng</div>
+    </div>
+    <div class="pub-card__side">
+      <div class="pub-card__tags">
+        <span class="pub-tag">ICASSP 2026</span>
+        <span class="pub-tag pub-tag--highlight">Oral</span>
+      </div>
+      <div class="pub-card__links">
+        <a class="pub-link" href="https://arxiv.org/abs/2509.17050">Paper</a>
+      </div>
+    </div>
+  </div>
 
-## 📦 &nbsp;Projects {#projects}
+  <div class="pub-card">
+    <div class="pub-card__main">
+      <div class="pub-card__title">UroMAS: A multi-agent system for automated patient interview, clinical documentation, and initial management planning in urolithiasis</div>
+      <div class="pub-card__meta">Yining Chen, <strong>Huangwei Chen</strong>, Yalong Chen, Junyao Xu, Lifeng Ding, Lei Wu, Jiajun Bu, Gonghui Li<sup>&dagger;</sup></div>
+    </div>
+    <div class="pub-card__side">
+      <div class="pub-card__tags">
+        <span class="pub-tag">EAU 2026</span>
+        <span class="pub-tag pub-tag--highlight">Oral</span>
+      </div>
+      <div class="pub-card__links">
+        <a class="pub-link" href="https://doi.org/10.1016/S0302-2838(26)00476-8">Paper</a>
+      </div>
+    </div>
+  </div>
 
-- [![Stars](https://img.shields.io/github/stars/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models)](https://github.com/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models) [A Paper List for Medical Reasoning Large Language Models](https://github.com/HovChen/Paper-List-for-Medical-Reasoning-Large-Language-Models)
-- [![Stars](https://img.shields.io/github/stars/BeistMedAI/Paper-List-for-Prototypical-Learning)](https://github.com/BeistMedAI/Paper-List-for-Prototypical-Learning) [A Paper List for Prototypical Learning](https://github.com/BeistMedAI/Paper-List-for-Prototypical-Learning)
+  <div class="pub-card">
+    <div class="pub-card__main">
+      <div class="pub-card__title">MMLNB: Multi-Modal Learning for Neuroblastoma Subtyping Classification Assisted with Textual Description Generation</div>
+      <div class="pub-card__authors"><strong>Huangwei Chen<sup>*</sup></strong>, Yifei Chen<sup>*</sup>, Zhenyu Yan, Mingyang Ding, Chenlei Li, Zhu Zhu<sup>&dagger;</sup>, Feiwei Qin<sup>&dagger;</sup></div>
+    </div>
+    <div class="pub-card__side">
+      <div class="pub-card__tags">
+        <span class="pub-tag">arXiv 2025</span>
+      </div>
+      <div class="pub-card__links">
+        <a class="pub-link" href="https://arxiv.org/abs/2503.12927">Paper</a>
+        <span class="pub-link-sep">/</span>
+        <a class="pub-link" href="https://github.com/HovChen/MMLNB">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <div class="pub-card__main">
+      <div class="pub-card__title">Directed Ordinal Diffusion Regularization for Progression-Aware Diabetic Retinopathy Grading</div>
+      <div class="pub-card__authors"><strong>Huangwei Chen<sup>*</sup></strong>, Junhao Jia<sup>*</sup>, Ruocheng Li, Cunyuan Yang, Wu Li, Xiaotao Pang, Yifei Chen, Haishuai Wang<sup>&dagger;</sup>, Jiajun Bu, Lei Wu<sup>&dagger;</sup></div>
+    </div>
+    <div class="pub-card__side">
+      <div class="pub-card__tags">
+        <span class="pub-tag">arXiv 2026</span>
+      </div>
+      <div class="pub-card__links">
+        <a class="pub-link" href="https://arxiv.org/abs/2602.21942">Paper</a>
+        <span class="pub-link-sep">/</span>
+        <a class="pub-link" href="https://github.com/HovChen/D-ODR">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <div class="pub-card__main">
+      <div class="pub-card__title">Unsupervised Causal Prototypical Networks for De-biased Interpretable Dermoscopy Diagnosis</div>
+      <div class="pub-card__authors">Junhao Jia, Yueyi Wu, <strong>Huangwei Chen</strong>, Haodong Jing, Haishuai Wang<sup>&dagger;</sup>, Jiajun Bu, Lei Wu<sup>&dagger;</sup></div>
+    </div>
+    <div class="pub-card__side">
+      <div class="pub-card__tags">
+        <span class="pub-tag">arXiv 2026</span>
+      </div>
+      <div class="pub-card__links">
+        <a class="pub-link" href="https://arxiv.org/abs/2602.23752">Paper</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <div class="pub-card__main">
+      <div class="pub-card__title">MedCollab: Causal-Driven Multi-Agent Collaboration for Full-Cycle Clinical Diagnosis via IBIS-Structured Argumentation</div>
+      <div class="pub-card__authors">Yuqi Zhan<sup>*</sup>, Xinyue Wu<sup>*</sup>, Tianyu Lin, Yutong Bao, Xiaoyu Wang, Weihao Cheng, <strong>Huangwei Chen<sup>&dagger;</sup></strong>, Feiwei Qin<sup>&dagger;</sup>, Zhu Zhu<sup>&dagger;</sup></div>
+    </div>
+    <div class="pub-card__side">
+      <div class="pub-card__tags">
+        <span class="pub-tag">arXiv 2026</span>
+      </div>
+      <div class="pub-card__links">
+        <a class="pub-link" href="https://arxiv.org/abs/2603.01131">Paper</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <div class="pub-card__main">
+      <div class="pub-card__title">Sci-Mind: Cognitively-Inspired Adversarial Debate for Autonomous Mathematical Modeling</div>
+      <div class="pub-card__authors">Junhao Jia, <strong>Huangwei Chen</strong>, Ruiying Sun, Yanhui Song, Haishuai Wang<sup>&dagger;</sup>, Jiajun Bu, Lei Wu<sup>&dagger;</sup></div>
+    </div>
+    <div class="pub-card__side">
+      <div class="pub-card__tags">
+        <span class="pub-tag">arXiv 2026</span>
+      </div>
+      <div class="pub-card__links">
+        <a class="pub-link" href="https://arxiv.org/abs/2603.27584">Paper</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pub-note"><sup>*</sup> Equal contribution. <sup>&dagger;</sup> Corresponding author.</div>
+</div>
 
 ## 🧾 &nbsp;Patents {#patents}
 
@@ -104,6 +215,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
     <img src="/images/2025守正之星（竖屏）.jpg" alt="2025守正之星（竖屏）" class="gallery-img" />
     <img src="/images/2025长白山.jpg" alt="2025长白山" class="gallery-img" />
     <img src="/images/2025百大领奖.jpg" alt="2025百大领奖" class="gallery-img" />
+    <img src="/images/2026浙江教科.jpg" alt="2026浙江教科" class="gallery-img" />
     <img src="/images/2023西湖.JPG" alt="2023西湖" class="gallery-img" />
     <img src="/images/2023先进班集体答辩.jpeg" alt="2023先进班集体答辩" class="gallery-img" />
     <img src="/images/2023亚运会-工作照.JPG" alt="2023亚运会-工作照" class="gallery-img" />
