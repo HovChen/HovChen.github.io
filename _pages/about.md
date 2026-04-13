@@ -68,7 +68,8 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
       </div>
       <div class="pub-card__links">
         <a class="pub-link" href="https://arxiv.org/abs/2604.08927">Paper</a>
-
+        <span class="pub-link-sep">/</span>
+        <a class="pub-link" href="https://github.com/HovChen/Aegle">Code</a>
       </div>
     </div>
   </div>
@@ -85,8 +86,6 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
       </div>
       <div class="pub-card__links">
         <a class="pub-link" href="https://arxiv.org/abs/2509.17050">Paper</a>
-        <span class="pub-link-sep">/</span>
-        <a class="pub-link" href="https://github.com/HovChen/Aegle">Code</a>
       </div>
     </div>
   </div>
