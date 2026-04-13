@@ -59,6 +59,22 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 <div class="pub-list">
   <div class="pub-card">
     <div class="pub-card__main">
+      <div class="pub-card__title">Beyond the Individual: Virtualizing Multi-Disciplinary Reasoning for Clinical Intake via Collaborative Agents</div>
+      <div class="pub-card__authors"><strong>Huangwei Chen</strong>, Wu Li, Junhao Jia, Yining Chen, Xiaotao Pang, Ya-Long Chen, Li Gonghui, Haishuai Wang<sup>&dagger;</sup>, Jiajun Bu<sup>&dagger;</sup>, Lei Wu<sup>&dagger;</sup></div>
+    </div>
+    <div class="pub-card__side">
+      <div class="pub-card__tags">
+        <span class="pub-tag">ACL 2026 Findings</span>
+      </div>
+      <div class="pub-card__links">
+        <a class="pub-link" href="https://arxiv.org/abs/2604.08927">Paper</a>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <div class="pub-card__main">
       <div class="pub-card__title">Geodesic Prototype Matching via Diffusion Maps for Interpretable Fine-Grained Recognition</div>
       <div class="pub-card__authors">Junhao Jia, Yunyou Liu, Yifei Sun, <strong>Huangwei Chen</strong>, Feiwei Qin<sup>&dagger;</sup>, Changmiao Wang, Yong Peng</div>
     </div>
@@ -69,6 +85,8 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
       </div>
       <div class="pub-card__links">
         <a class="pub-link" href="https://arxiv.org/abs/2509.17050">Paper</a>
+        <span class="pub-link-sep">/</span>
+        <a class="pub-link" href="https://github.com/HovChen/Aegle">Code</a>
       </div>
     </div>
   </div>
