@@ -60,7 +60,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
   <div class="pub-card">
     <div class="pub-card__main">
       <div class="pub-card__title">Beyond the Individual: Virtualizing Multi-Disciplinary Reasoning for Clinical Intake via Collaborative Agents</div>
-      <div class="pub-card__authors"><strong>Huangwei Chen</strong>, Wu Li, Junhao Jia, Yining Chen, Xiaotao Pang, Ya-Long Chen, Li Gonghui, Haishuai Wang<sup>&dagger;</sup>, Jiajun Bu<sup>&dagger;</sup>, Lei Wu<sup>&dagger;</sup></div>
+      <div class="pub-card__authors"><strong>Huangwei Chen</strong>, Wu Li, Junhao Jia, Yining Chen, Xiaotao Pang, Yalong Chen, Gonghui Li, Haishuai Wang<sup>&dagger;</sup>, Jiajun Bu<sup>&dagger;</sup>, Lei Wu<sup>&dagger;</sup></div>
     </div>
     <div class="pub-card__side">
       <div class="pub-card__tags">
