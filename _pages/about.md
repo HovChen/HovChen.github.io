@@ -40,6 +40,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 ## 🔥 &nbsp;News {#news}
 <div style="max-height: 300px; overflow: auto; font-size: 15px;">
 	<ul>
+    <li><i>2026.05</i>: &nbsp;🎉🎉 Featured in <a href="https://paper.people.com.cn/rmrb/pc/layout/202605/04/node_06.html"><strong>People's Daily</strong></a> as the <strong>only undergraduate representative from Zhejiang Province</strong> among the outstanding National Scholarship recipients nationwide!</li>
     <li><i>2026.04</i>: &nbsp;🎉🎉 Our paper for <a href="https://2026.aclweb.org/">ACL 2026</a> has been selected for <strong>Oral Presentation</strong>!</li>
     <li><i>2026.04</i>: &nbsp;🎉🎉 Our 2 papers have been accepted by <a href="https://2026.aclweb.org/">ACL 2026</a>!</li>
 		<li><i>2026.03</i>: &nbsp;🎉🎉 Our paper for <a href="https://2026.ieeeicassp.org/">ICASSP 2026</a> has been selected for <strong>Oral Presentation</strong>!</li>
@@ -51,6 +52,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 <!-- <div style="margin-top: 5px; font-size: small; margin-bottom: 0px;">⬆ Scrollable</div> -->
 ## 📰 &nbsp;Reports {#reports}
 
+- [![报道-人民日报](https://img.shields.io/badge/%E6%8A%A5%E9%81%93-%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5-E7250F?style=flat-square)](https://paper.people.com.cn/rmrb/pc/layout/202605/04/node_06.html) [2024—2025学年度本专科生国家奖学金获奖学生代表名录](https://paper.people.com.cn/rmrb/pc/layout/202605/04/node_06.html)
 - [![报道-澎湃新闻](https://img.shields.io/badge/%E6%8A%A5%E9%81%93-%E6%BE%8E%E6%B9%83%E6%96%B0%E9%97%BB-blue?style=flat-square)](https://m.thepaper.cn/newsDetail_forward_30536383) [在杭电，看见奋斗足迹 ｜ 陈黄未：奔跑在“用AI解决领域痛点”的道路上](https://m.thepaper.cn/newsDetail_forward_30536383)
 - [![报道-央广网](https://img.shields.io/badge/%E6%8A%A5%E9%81%93-%E5%A4%AE%E5%B9%BF%E7%BD%91-red?style=flat-square)](https://zj.cnr.cn/gedilianbo/ls/20240806/t20240806_526836807.shtml) [中外学子对话黄帝文化，探寻乡村蝶变密码](https://zj.cnr.cn/gedilianbo/ls/20240806/t20240806_526836807.shtml)
 
