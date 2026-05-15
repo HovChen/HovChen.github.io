@@ -40,6 +40,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 ## 🔥 &nbsp;News {#news}
 <div style="max-height: 300px; overflow: auto; font-size: 15px;">
 	<ul>
+    <li><i>2026.05</i>: &nbsp;🎉🎉 Our paper has been early accepted by <a href="https://conferences.miccai.org/2026/en/">MICCAI 2026</a>!</li>
     <li><i>2026.05</i>: &nbsp;🎉🎉 Featured in <a href="https://paper.people.com.cn/rmrb/pc/layout/202605/04/node_06.html"><strong>People's Daily</strong></a> as the <strong>only undergraduate representative from Zhejiang Province</strong> among the outstanding National Scholarship recipients nationwide!</li>
     <li><i>2026.04</i>: &nbsp;🎉🎉 Our paper for <a href="https://2026.aclweb.org/">ACL 2026</a> has been selected for <strong>Oral Presentation</strong>!</li>
     <li><i>2026.04</i>: &nbsp;🎉🎉 Our 2 papers have been accepted by <a href="https://2026.aclweb.org/">ACL 2026</a>!</li>
