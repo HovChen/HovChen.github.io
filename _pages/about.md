@@ -227,20 +227,22 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 - *2025–2026* **Youth Pioneer Ambassador for Cross-cultural Exchange**, HDU International Office
 
 ## 📷 &nbsp;Gallery {#gallery}
-<div class="jg-scroll">
-  <div class="jg" id="gallery-grid">
-    <img src="/images/2025国特合照.JPG" alt="2025国特合照" class="gallery-img" />
-    <img src="/images/2025国特答辩.jpeg" alt="2025国特答辩" class="gallery-img" />
-    <img src="/images/2025室友讨论.jpg" alt="2025室友讨论" class="gallery-img" />
-    <img src="/images/2025守正之星（竖屏）.jpg" alt="2025守正之星（竖屏）" class="gallery-img" />
-    <img src="/images/2025长白山.jpg" alt="2025长白山" class="gallery-img" />
-    <img src="/images/2025百大领奖.jpg" alt="2025百大领奖" class="gallery-img" />
-    <img src="/images/2026浙江教科.jpg" alt="2026浙江教科" class="gallery-img" />
-    <img src="/images/2023西湖.JPG" alt="2023西湖" class="gallery-img" />
-    <img src="/images/2023先进班集体答辩.jpeg" alt="2023先进班集体答辩" class="gallery-img" />
-    <img src="/images/2023亚运会-工作照.JPG" alt="2023亚运会-工作照" class="gallery-img" />
-    <img src="/images/2025松花江铁路大桥.jpg" alt="2025松花江铁路大桥" class="gallery-img" />
-    <img src="/images/2024计算机设计大赛.JPG" alt="2024计算机设计大赛" class="gallery-img" />
-    <img src="/images/2024剑桥火车站.JPG" alt="2024剑桥火车站" class="gallery-img" />
+<div class="jg-scroll-fade">
+  <div class="jg-scroll">
+    <div class="jg" id="gallery-grid">
+      <img src="/images/2025国特合照.JPG" alt="2025国特合照" class="gallery-img" />
+      <img src="/images/2025国特答辩.jpeg" alt="2025国特答辩" class="gallery-img" />
+      <img src="/images/2025室友讨论.jpg" alt="2025室友讨论" class="gallery-img" />
+      <img src="/images/2025守正之星（竖屏）.jpg" alt="2025守正之星（竖屏）" class="gallery-img" />
+      <img src="/images/2025长白山.jpg" alt="2025长白山" class="gallery-img" />
+      <img src="/images/2025百大领奖.jpg" alt="2025百大领奖" class="gallery-img" />
+      <img src="/images/2026浙江教科.jpg" alt="2026浙江教科" class="gallery-img" />
+      <img src="/images/2023西湖.JPG" alt="2023西湖" class="gallery-img" />
+      <img src="/images/2023先进班集体答辩.jpeg" alt="2023先进班集体答辩" class="gallery-img" />
+      <img src="/images/2023亚运会-工作照.JPG" alt="2023亚运会-工作照" class="gallery-img" />
+      <img src="/images/2025松花江铁路大桥.jpg" alt="2025松花江铁路大桥" class="gallery-img" />
+      <img src="/images/2024计算机设计大赛.JPG" alt="2024计算机设计大赛" class="gallery-img" />
+      <img src="/images/2024剑桥火车站.JPG" alt="2024剑桥火车站" class="gallery-img" />
+    </div>
   </div>
 </div>
