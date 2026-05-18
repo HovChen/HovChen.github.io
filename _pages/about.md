@@ -40,6 +40,7 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
 ## 🔥 &nbsp;News {#news}
 <div style="max-height: 300px; overflow: auto; font-size: 15px;">
 	<ul>
+    <li><i>2026.05</i>: &nbsp;🎉🎉 Our paper has been accepted by <a href="https://www.sciencedirect.com/journal/knowledge-based-systems">KBS</a> (IF=7.6)!</li>
     <li><i>2026.05</i>: &nbsp;🎉🎉 Our paper has been early accepted by <a href="https://conferences.miccai.org/2026/en/">MICCAI 2026</a>!</li>
     <li><i>2026.05</i>: &nbsp;🎉🎉 Featured in <a href="https://paper.people.com.cn/rmrb/pc/layout/202605/04/node_06.html"><strong>People's Daily</strong></a> as the <strong>only undergraduate representative from Zhejiang Province</strong> among the outstanding National Scholarship recipients nationwide!</li>
     <li><i>2026.04</i>: &nbsp;🎉🎉 Our paper for <a href="https://2026.aclweb.org/">ACL 2026</a> has been selected for <strong>Oral Presentation</strong>!</li>
@@ -73,6 +74,23 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
         <a class="pub-link" href="https://arxiv.org/abs/2604.08927">Paper</a>
         <span class="pub-link-sep">/</span>
         <a class="pub-link" href="https://github.com/HovChen/Aegle">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <div class="pub-card__main">
+      <div class="pub-card__title">PathLens: A Lightweight Multimodal Reasoner for In-Depth Pathology Insights</div>
+      <div class="pub-card__authors">Zhu Zhu<sup>*</sup>, <strong>Huangwei Chen<sup>*</sup></strong>, Zhenyu Yan<sup>*</sup>, Donghao Zhang, Yueyi Wu, Yuqi Zhan, Weihao Cheng, Manli Zhao, Weizhong Gu, Yifei Chen, Feiwei Qin<sup>&dagger;</sup>, Gang Yu<sup>&dagger;</sup></div>
+    </div>
+    <div class="pub-card__side">
+      <div class="pub-card__tags">
+        <span class="pub-tag">KBS 2026</span>
+      </div>
+      <div class="pub-card__links">
+        <a class="pub-link" href="">Paper</a>
+        <span class="pub-link-sep">/</span>
+        <a class="pub-link" href="https://github.com/HovChen/PathLens">Code</a>
       </div>
     </div>
   </div>
