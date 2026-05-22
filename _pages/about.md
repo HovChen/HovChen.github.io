@@ -88,9 +88,25 @@ I am an undergraduate student majoring in **Computer Science and Technology** at
         <span class="pub-tag">KBS 2026</span>
       </div>
       <div class="pub-card__links">
-        <a class="pub-link" href="">Paper</a>
+        <a class="pub-link" href="https://doi.org/10.1016/j.knosys.2026.116261">Paper</a>
         <span class="pub-link-sep">/</span>
         <a class="pub-link" href="https://github.com/HovChen/PathLens">Code</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pub-card">
+    <div class="pub-card__main">
+      <div class="pub-card__title">SCOUT: Selective Coupling via Optimal Unbalanced Transport for Interpretable Text Classification</div>
+      <div class="pub-card__authors">Junhao Jia, Hanwen Zheng, Yueyi Wu, <strong>Huangwei Chen</strong>, Haishuai Wang, Jiajun Bu<sup>&dagger;</sup>, Lei Wu<sup>&dagger;</sup></div>
+    </div>
+    <div class="pub-card__side">
+      <div class="pub-card__tags">
+        <span class="pub-tag">ACL 2026</span>
+        <span class="pub-tag pub-tag--highlight">Oral</span>
+      </div>
+      <div class="pub-card__links">
+        <a class="pub-link" href="">Paper</a>
       </div>
     </div>
   </div>
